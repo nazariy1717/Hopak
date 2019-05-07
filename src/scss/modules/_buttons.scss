@@ -1,0 +1,100 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.btn{
+  position: relative;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.btn-primary{
+  display: inline-block;
+  min-width: 155px;
+  height: 36px;
+  padding: 0 20px;
+  text-align: center;
+  transition: all 0.3s ease-in;
+  &:hover{
+    .btn-primary__svg path{
+      d: path("M3,15 L 0,85 93,100 100,0 3,15 Z");
+    }
+  }
+  &.--yellow{
+    span{
+      color: var(--col-black);
+    }
+    .btn-primary__svg path{
+      fill: var(--col-yellow);
+    }
+  }
+  &.--white{
+    span{
+      color: var(--col-black);
+    }
+    .btn-primary__svg path{
+      fill: #fff;
+    }
+  }
+  &.--red-white{
+    span{
+      color: var(--col-red);
+    }
+    .btn-primary__svg path{
+      fill: #fff;
+    }
+  }
+  &.--bordered{
+    span{
+      color: var(--col-red);
+    }
+    .btn-primary__svg path{
+      fill: #fff;
+      stroke-width: 1px;
+      stroke: var(--col-red);
+    }
+  }
+  span{
+    position: relative;
+    z-index: 1;
+    font-family: 'Brandon Grotesque', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    line-height: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+    @media (max-width: $breakpoint-sm) {
+      font-size: 12px;
+    }
+  }
+  &__svg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 36px;
+    path{
+      fill: var(--col-red);
+      transition: all 0.3s;
+    }
+  }
+}
+
+.btn-link{
+  display: inline-block;
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--col-red);
+  transition: all 0.3s ease-in;
+  @media (max-width: $breakpoint-sm) {
+    font-size: 12px;
+  }
+  &:hover{
+    color: var(--col-black);
+  }
+}

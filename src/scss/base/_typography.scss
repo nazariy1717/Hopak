@@ -1,0 +1,174 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+
+strong, .bold{ font-weight: 700; }
+.black{ font-weight: 900; }
+
+
+.text-right   { text-align: right;  }
+.text-center  { text-align: center; }
+.text-left    { text-align: left;   }
+
+.title{
+  display: block;
+  font-family: 'Brandon Grotesque', sans-serif;
+  color: var(--col-red);
+  &.--title-1{
+    font-size: 40px;
+    line-height: 57px;
+    @media (max-width: $breakpoint-md){
+      font-size: 36px;
+      line-height: 40px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 26px;
+      line-height: 31px;
+    }
+  }
+  &.--title-2{
+    font-size: 48px;
+    line-height: 50px;
+    @media (max-width: $breakpoint-md){
+      font-size: 40px;
+      line-height: 44px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 26px;
+      line-height: 31px;
+    }
+  }
+  &.--title-3{
+    font-size: 60px;
+    line-height: 86px;
+    @media (max-height: 680px){
+      font-size: 48px;
+      line-height: 50px;
+    }
+    @media (max-width: $breakpoint-md){
+      font-size: 48px;
+      line-height: 50px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 26px;
+      line-height: 31px;
+    }
+  }
+  &.--white{
+    color: #fff;
+  }
+}
+
+.app-txt{
+  display: block;
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--col-black);
+  &.--bigger{
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+
+
+.text-content{
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--col-black);
+  @media (max-width: $breakpoint-sm){
+    font-size: 18px;
+    line-height: 22px;
+  }
+  h1{
+    display: block;
+    font-family: 'Brandon Grotesque', sans-serif;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--col-black);
+    margin-bottom: 15px;
+    @media (max-width: $breakpoint-sm){
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+  h2{
+    display: block;
+    font-family: 'Brandon Grotesque', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--col-black);
+    margin-bottom: 15px;
+    @media (max-width: $breakpoint-sm){
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+  h3{
+    display: block;
+    font-family: 'Brandon Grotesque', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: var(--col-black);
+    margin-bottom: 15px;
+    @media (max-width: $breakpoint-sm){
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  p{
+    margin-bottom: 10px;
+  }
+  ul{
+    padding: 0 0 0 20px;
+    margin-bottom: 15px;
+    list-style-type: disc;
+  }
+  ol{
+    padding: 0 0 0 20px;
+    margin-bottom: 15px;
+    list-style-type: decimal;
+  }
+  i{
+    font-style: italic;
+  }
+  a{
+    color: var(--col-red);
+    text-decoration: underline;
+    transition: all 0.3s;
+  }
+  strong, b{
+    font-weight: 700;
+  }
+  img{
+    max-width: 100%;
+    display: block;
+    vertical-align: middle;
+  }
+  table{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    border: 1px solid var(--col-grey);
+    th,td{
+      padding: 5px;
+      border: 1px solid var(--col-grey);
+    }
+  }
+}
