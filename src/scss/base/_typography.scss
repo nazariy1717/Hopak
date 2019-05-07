@@ -12,71 +12,60 @@ a{
 strong, .bold{ font-weight: 700; }
 .black{ font-weight: 900; }
 
-
 .text-right   { text-align: right;  }
 .text-center  { text-align: center; }
 .text-left    { text-align: left;   }
 
-.title{
-  display: block;
-  font-family: 'Brandon Grotesque', sans-serif;
-  color: var(--col-red);
-  &.--title-1{
-    font-size: 40px;
-    line-height: 57px;
-    @media (max-width: $breakpoint-md){
-      font-size: 36px;
-      line-height: 40px;
-    }
-    @media (max-width: $breakpoint-sm){
-      font-size: 26px;
-      line-height: 31px;
-    }
-  }
-  &.--title-2{
-    font-size: 48px;
-    line-height: 50px;
-    @media (max-width: $breakpoint-md){
-      font-size: 40px;
-      line-height: 44px;
-    }
-    @media (max-width: $breakpoint-sm){
-      font-size: 26px;
-      line-height: 31px;
-    }
-  }
-  &.--title-3{
-    font-size: 60px;
-    line-height: 86px;
-    @media (max-height: 680px){
-      font-size: 48px;
-      line-height: 50px;
-    }
-    @media (max-width: $breakpoint-md){
-      font-size: 48px;
-      line-height: 50px;
-    }
-    @media (max-width: $breakpoint-sm){
-      font-size: 26px;
-      line-height: 31px;
-    }
-  }
-  &.--white{
-    color: #fff;
-  }
+.brown{ color: var(--col-brown)}
+.yellow{ color: var(--col-yellow)}
+.white{ color: var(--col-white)}
+
+.heading{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
 }
 
-.app-txt{
-  display: block;
-  font-family: 'Brandon Grotesque', sans-serif;
+.heading-1{
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+.heading-2{
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 50px;
+}
+
+.heading-3{
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.heading-4{
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.heading-5{
   font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: var(--col-black);
-  &.--bigger{
-    font-size: 20px;
-    line-height: 24px;
-  }
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.heading-6{
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 40px;
+}
+
+.app-txt-normal{
+  display: block;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 40px;
 }
 
 

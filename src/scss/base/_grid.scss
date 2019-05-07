@@ -2,20 +2,11 @@
 @import "../tools/breakpoints";
 
 .container {
-  max-width: 1120px;
-  padding: 0 15px;
+  max-width: 1920px;
+  padding: 0 30px;
   margin: auto;
   @media (max-width: $breakpoint-sm){
-    padding: 0 30px;
-  }
-}
-
-.container-small {
-  max-width: 935px;
-  padding: 0 15px;
-  margin: auto;
-  @media (max-width: $breakpoint-sm){
-    padding: 0 30px;
+    padding: 0 15px;
   }
 }
 
@@ -28,7 +19,13 @@
   flex-flow: row wrap;
 }
 
-.m-row {margin: 0 -15px;}
+.m-row {
+  margin: 0 -30px;
+  @media (max-width: $breakpoint-sm){
+    margin: 0 -15px;
+  }
+}
+
 .m-row-sm {margin: 0 -8px;}
 
 .column {padding: 0 15px;position: relative;}

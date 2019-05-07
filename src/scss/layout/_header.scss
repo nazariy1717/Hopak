@@ -7,141 +7,11 @@
   top: 0;
   left: 0;
   right: 0;
+  height: 98px;
   z-index: 99;
-  background-color: #fff;
-  box-shadow: 0 0 6px 3px rgba(0,0,0,0.16);
-  @media (max-width: $breakpoint-lg) {
-    box-shadow: none;
-  }
-  &.--modifier{
-    background-color: transparent;
-    box-shadow: none;
-    .header__row{
-      height: 100px;
-      @media (max-width: $breakpoint-lg) {
-        height: 70px;
-      }
-    }
-    .header-list__link{
-      color: #fff;
-      @media (max-width: $breakpoint-lg) {
-        color: var(--col-black);
-      }
-      &:hover{
-        color: var(--col-red);
-      }
-    }
-    .btn-primary{
-      &.--bordered span{
-        color: #fff;
-        @media (max-width: $breakpoint-lg) {
-          color: var(--col-red);
-        }
-      }
-      .btn-primary__svg path{
-        fill: transparent;
-        stroke: #fff;
-        @media (max-width: $breakpoint-lg) {
-          stroke: var(--col-red);
-        }
-      }
-      &:hover{
-        span{
-          color: var(--col-red);
-        }
-        path{
-          stroke: var(--col-red);
-        }
-      }
-    }
-  }
-  &.is-active{
-    background-color: #fff;
-  }
-  &__container{
-    max-width: 1230px;
-    padding: 0 15px;
-    margin: auto;
-  }
-  &__row{
-    height: 70px;
-    transition: all 0.3s;
-    @media (max-width: $breakpoint-lg) {
-      height: 70px;
-      justify-content: initial;
-    }
-  }
-  &__column{
-    padding: 0 15px;
-  }
-  &__mobile-logo{
-    display: none;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    @media (max-width: $breakpoint-lg) {
-      display: inline-block;
-    }
-  }
-  &__logo{
-    display: block;
-    width: 97px;
-    height: 40px;
-  }
+  background-color: var(--col-grey);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.header-list{
-  @media (max-width: $breakpoint-lg) {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    background-color: #fff;
-    .header__logo{
-      display: none;
-    }
-  }
-  &__item{
-    display: inline-block;
-    vertical-align: middle;
-    @media (max-width: $breakpoint-lg) {
-      display: block;
-      margin-bottom: 12px;
-      text-align: center;
-      .btn{
-        margin: auto;
-      }
-    }
-    & + & {
-      margin-left: 85px;
-      @media (max-width: 1280px){
-        margin-left: 45px;
-      }
-      @media (max-width: $breakpoint-lg) {
-        margin-left: 0;
-      }
-    }
-  }
-
-  &__link{
-    display: block;
-    font-size: 14px;
-    color: var(--col-black);
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: all 0.3s;
-    @media (max-width: $breakpoint-lg) {
-      display: inline-block;
-    }
-    &:hover{
-      color: var(--col-red);
-    }
-  }
-}
-
 
 .header-hamburger{
   display: none;
@@ -158,8 +28,5 @@
     display: inline-block;
   }
 }
-
-
-
 
 .js-show{ display: block;}
