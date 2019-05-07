@@ -20,6 +20,9 @@ strong, .bold{ font-weight: 700; }
 .yellow{ color: var(--col-yellow)}
 .white{ color: var(--col-white)}
 
+.--medium{font-weight: 500;}
+.--semi-bold{font-weight: 600;}
+
 .heading{
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -68,6 +71,12 @@ strong, .bold{ font-weight: 700; }
   line-height: 40px;
 }
 
+
+.app-txt-bigger{
+  display: block;
+  font-size: 20px;
+  line-height: 25px;
+}
 
 
 .text-content{

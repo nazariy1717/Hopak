@@ -20,10 +20,7 @@
 }
 
 .m-row {
-  margin: 0 -30px;
-  @media (max-width: $breakpoint-sm){
     margin: 0 -15px;
-  }
 }
 
 .m-row-sm {margin: 0 -8px;}
