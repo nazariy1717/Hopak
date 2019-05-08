@@ -85,7 +85,83 @@
                             <svg class="inline-svg-icon home-item__logo">
                                 <use xlink:href="#logo"></use>
                             </svg>
-                            <p class="home-item__desc">З нами весело та смачно</p>
+                            <div class="home-item__desc display-table ">
+                                <div class="display-table__cell">
+                                    <p>З нами весело та смачно</p>
+                                </div>
+                            </div>
+                            <a href="/" class="btn btn-bordered">Зарезервувати столик</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-carousel__cell">
+                <div class="home-item display-table">
+                    <img src="/dist/img/home-slider/img-2.jpg" class="home-item__image" alt="slider image 1" title="slider image 2">
+                    <div class="display-table__cell">
+                        <div class="home-item__content">
+                            <svg class="inline-svg-icon home-item__logo">
+                                <use xlink:href="#logo"></use>
+                            </svg>
+                            <div class="home-item__desc display-table ">
+                                <div class="display-table__cell">
+                                    <p>Смачні коктейлі, ароматні кальяни, улюблені музичні хіти  та приємна атмосфера.</p>
+                                </div>
+                            </div>
+                            <a href="/" class="btn btn-bordered">Зарезервувати столик</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-carousel__cell">
+                <div class="home-item display-table">
+                    <img src="/dist/img/home-slider/img-3.jpg" class="home-item__image" alt="slider image 1" title="slider image 2">
+                    <div class="display-table__cell">
+                        <div class="home-item__content">
+                            <svg class="inline-svg-icon home-item__logo">
+                                <use xlink:href="#logo"></use>
+                            </svg>
+                            <div class="home-item__desc display-table ">
+                                <div class="display-table__cell">
+                                    <p>Смачні страви української , гуцульської, старогалицької та традиційної  кавказької кухні.</p>
+                                </div>
+                            </div>
+                            <a href="/" class="btn btn-bordered">Зарезервувати столик</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-carousel__cell">
+                <div class="home-item display-table">
+                    <img src="/dist/img/home-slider/img-4.jpg" class="home-item__image" alt="slider image 1" title="slider image 2">
+                    <div class="display-table__cell">
+                        <div class="home-item__content">
+                            <svg class="inline-svg-icon home-item__logo">
+                                <use xlink:href="#logo"></use>
+                            </svg>
+                            <div class="home-item__desc display-table ">
+                                <div class="display-table__cell">
+                                    <p>Розслабляюча атмосфера після важкого робочого дня</p>
+                                </div>
+                            </div>
+                            <a href="/" class="btn btn-bordered">Зарезервувати столик</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-carousel__cell">
+                <div class="home-item display-table">
+                    <img src="/dist/img/home-slider/img-5.jpg" class="home-item__image" alt="slider image 1" title="slider image 2">
+                    <div class="display-table__cell">
+                        <div class="home-item__content">
+                            <svg class="inline-svg-icon home-item__logo">
+                                <use xlink:href="#logo"></use>
+                            </svg>
+                            <div class="home-item__desc display-table ">
+                                <div class="display-table__cell">
+                                    <p>Готуємо смачні бізнес ланчі  під замовлення</p>
+                                </div>
+                            </div>
                             <a href="/" class="btn btn-bordered">Зарезервувати столик</a>
                         </div>
                     </div>
@@ -120,13 +196,14 @@
 
 <!-- libs -->
 <script src="dist/js/libs/jquery-3.2.1.min.js"></script>
+<script src="dist/js/libs/flickity.pkgd.min.js"></script>
 <script src="dist/js/libs/TimelineMax.min.js"></script>
 <script src="dist/js/libs/TweenMax.min.js"></script>
 
 <!-- frontend -->
 <script src="dist/js/front.js"></script>
 <script>
-
+    slider.newSlider('.home-carousel',{});
 </script>
 </body>
 </html>

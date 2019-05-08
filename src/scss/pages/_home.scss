@@ -9,6 +9,7 @@
 .home-carousel{
   &__cell{
     width: 100%;
+    min-height: calc(100vh - 98px);
   }
 }
 
@@ -33,6 +34,12 @@
     width: 710px;
     height: 275px;
     margin: auto auto 60px;
+    @media (max-height: 850px){
+      display: block;
+      width: 525px;
+      height: 205px;
+      margin: auto auto 20px;
+    }
   }
   &__desc{
     font-weight: 500;
@@ -42,6 +49,9 @@
     min-height: 105px;
     max-width: 465px;
     margin: auto auto 60px;
+    @media (max-height: 850px){
+      margin: auto auto 30px;
+    }
   }
   &__btn{}
 }

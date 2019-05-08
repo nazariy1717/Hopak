@@ -39,12 +39,6 @@
          autoPlay: false,
          cellAlign: 'center',
          contain: true,
-         arrowShape: {
-             x0: 15,
-             x1: 45, y1: 25,
-             x2: 65, y2: 40,
-             x3: 65
-         }
      },
 
      init: function () {
