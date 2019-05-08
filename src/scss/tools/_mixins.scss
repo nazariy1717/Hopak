@@ -6,6 +6,11 @@
   bottom: 0;
 }
 
+@mixin object-fit() {
+  object-fit: cover;
+  object-position: center;
+}
+
 @mixin grid-size($size) {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 $size;

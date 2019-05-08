@@ -7,10 +7,39 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 98px;
-  z-index: 99;
+  z-index: 999;
   background-color: var(--col-grey);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  &__row{
+    height: 98px;
+  }
+  &__logo{
+    display: block;
+    width: 128px;
+    height: 48px;
+  }
+}
+
+.header-list{
+  &__item{
+    display: inline-block;
+    & + & {
+      margin-left: 30px;
+    }
+  }
+  &__link{
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--col-brown);
+    cursor: pointer;
+    transition: all 0.3s;
+    &.active{
+      border-bottom: 1px;
+
+    }
+  }
 }
 
 .header-hamburger{

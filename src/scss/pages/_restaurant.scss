@@ -1,0 +1,83 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.restaurant-carousel {
+  margin-bottom: 80px;
+  &__cell {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 98px);
+  }
+  &__image {
+    //&:after{
+    //  content: '';
+    //  @include absolute;
+    //  background: linear-gradient(90deg, #000000 -3.91%, rgba(0, 0, 0, 0) 41.54%);
+    //}
+    img {
+      @include absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -1;
+    }
+  }
+}
+
+.restaurant-about{
+  margin-bottom: 80px;
+  &__image{
+    display: block;
+    max-width: 100%;
+    height: 485px;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__content{
+    position: relative;
+  }
+  &__btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 130px;
+    height: 130px;
+    padding: 47px 0;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--col-white);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    background-color: var(--col-red);
+  }
+  &__title{
+    margin-bottom: 50px;
+  }
+  &__desc {
+    max-width: 685px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 35px;
+  }
+}
+
+.restaurant-services{
+  margin-bottom: 80px;
+}
+
+.res-service-item{
+  z-index: 1;
+  &__image{
+    @include absolute;
+    @include object-fit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  &__title{}
+  &__btn{}
+}
