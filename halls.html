@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Restaurant Page</title>
+    <title>Halls Page</title>
     <link href="dist/css/build.css" rel="stylesheet">
 </head>
 <body>
@@ -229,7 +229,6 @@
         <path d="M25.7617 29.1857C17.6899 29.1857 11.1064 22.6303 11.1064 14.5928C11.1064 6.55539 17.6899 0 25.7617 0C33.8336 0 40.417 6.55539 40.417 14.5928C40.417 22.6303 33.8336 29.1857 25.7617 29.1857ZM25.7617 0.684046C18.0906 0.684046 11.7934 6.89741 11.7934 14.5928C11.7934 22.2883 18.0334 28.5016 25.7617 28.5016C33.4901 28.5016 39.7301 22.2883 39.7301 14.5928C39.7301 6.89741 33.4329 0.684046 25.7617 0.684046ZM25.7617 27.9316C18.3768 27.9316 12.3659 21.9463 12.3659 14.5928C12.3659 7.23943 18.3768 1.25408 25.7617 1.25408C33.1466 1.25408 39.1576 7.23943 39.1576 14.5928C39.1576 21.9463 33.1466 27.9316 25.7617 27.9316ZM25.7617 1.99511C18.7776 1.99511 13.1101 7.63845 13.1101 14.5928C13.1101 21.5472 18.7776 27.1905 25.7617 27.1905C32.7459 27.1905 38.4134 21.5472 38.4134 14.5928C38.4134 7.63845 32.7459 1.99511 25.7617 1.99511Z" fill="white"/>
     </symbol>
 
-
 </svg>
 
 <!-- Header -->
@@ -273,118 +272,24 @@
 <!-- page-wrapper-->
 <main class="page-wrapper">
 
-    <section class="restaurant-carousel --yellow-arrow">
-        <div class="restaurant-carousel__cell">
-            <div class="restaurant-carousel__image">
-                <img src="dist/img/restaurant-slider-image.jpg" alt="restaurant carousel image 1">
-            </div>
-        </div>
-        <div class="restaurant-carousel__cell">
-            <div class="restaurant-carousel__image">
-                <img src="dist/img/restaurant-slider-image.jpg" alt="restaurant carousel image 1">
-            </div>
-        </div>
-        <div class="restaurant-carousel__cell">
-            <div class="restaurant-carousel__image">
-                <img src="dist/img/restaurant-slider-image.jpg" alt="restaurant carousel image 1">
-            </div>
-        </div>
-    </section>
-
-    <section class="section restaurant-about">
+    <section class="section hall-section">
         <div class="container">
-            <div class="restaurant-about__wrapper">
-                <div class="row m-row align-middle align-justify">
-                    <div class="restaurant-about__column column col-xl-6 col-lg-5 col-xs-12">
-                        <img src="dist/img/restaurant-image.jpg" class="restaurant-about__image"
-                             alt="restaurant about image">
-                    </div>
-                    <div class="restaurant-about__column column col-xl-6 col-lg-7 col-xs-12">
-                        <div class="restaurant-about__content">
-                            <h2 class="heading heading-2 restaurant-about__title">Розкішний гуцульский ресторан</h2>
-                            <p class="restaurant-about__desc">«Гопак» - це сучасний український ресторан для Вашого
-                                незабутнього відпочинку. В основі нашого закладу лежить українська гостинність — чи це
-                                короткий бранч, чи ділова зустріч, чи святкуваня урочистостей, чи просто відпочинок з
-                                друзями - у ресторані "Гопак" вас завжди раді бачити!Тут ви зможете спробувати смачні
-                                страви
-                                української, гуцульської, старогалицької та традиційної кавказької кухні. Щодня на вас
-                                чекає
-                                жива музика, а щовихідних драйвові вечірки. Завітайте до нас, адже ресторан "Гопак" - це
-                                завжди весело та смачно!</p>
-                        </div>
-                    </div>
-                </div>
-                <a class="restaurant-about__btn modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
-            </div>
+            <h1 class="heading heading-1 brown hall-section__title">Зали</h1>
         </div>
-    </section>
-
-    <section class="restaurant-services">
-        <div class="container">
-            <h2 class="heading heading-2 text-center restaurant-services__title">Наші послуги</h2>
+        <div class="hall-section__wrapper">
             <div class="row m-row">
-                <div class="column col-lg-4 col-sm-6 col-xs-12">
-                    <div class="res-service-item">
-                        <div class="res-service-item__overlay"></div>
-                        <img src="dist/img/restaurant-service-1.jpg" alt="" class="res-service-item__image">
-                        <h3 class="heading heading-3 white text-center res-service-item__title">Свята</h3>
-                        <a class="btn btn-bordered res-service-item__btn modalTrigger"
-                           data-modal="#booking-modal">Зарезервувати столик</a>
+                <div class="column col-lg-6">
+                    <div class="hall-item">
+                        <div class="hall-item__overlay"></div>
+                        <img src="dist/img/hall-item.jpg" alt="" class="hall-item__image">
+                        <a class="modalTrigger"></a>
                     </div>
                 </div>
-                <div class="column col-lg-4 col-sm-6 col-xs-12">
-                    <div class="res-service-item">
-                        <div class="res-service-item__overlay"></div>
-                        <img src="dist/img/restaurant-service-2.jpg" alt="" class="res-service-item__image">
-                        <h3 class="heading heading-3 white text-center res-service-item__title">Бізнес-ланчі</h3>
-                        <a class="btn btn-bordered res-service-item__btn modalTrigger"
-                           data-modal="#booking-modal">Зарезервувати столик</a>
-                    </div>
-                </div>
-                <div class="column col-lg-4 col-sm-6 col-xs-12">
-                    <div class="res-service-item">
-                        <div class="res-service-item__overlay"></div>
-                        <img src="dist/img/restaurant-service-3.jpg" alt="" class="res-service-item__image">
-                        <h3 class="heading heading-3 white text-center res-service-item__title">Доставка їжі</h3>
-                        <a class="btn btn-bordered res-service-item__btn modalTrigger"
-                           data-modal="#booking-modal">Зарезервувати столик</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="restaurant-reviews">
-        <div class="container">
-            <h2 class="heading heading-2 text-center restaurant-reviews__title">Відгуки про ресторан</h2>
-        </div>
-        <div class="restaurant-reviews-carousel">
-            <div class="restaurant-reviews-carousel__cell">
-                <div class="res-review-item text-center">
-                    <img src="dist/img/review-person.png" alt="" class="res-review-item__image">
-                    <span class="heading heading-2 text-center res-review-item__name">Ярослава Бондаренко</span>
-                    <p class="heading heading-5 res-review-item__txt">Ресторан Гопак це найкращий ресторан у місті
-                        Львові! Дуже смачне м’ясо та салати. Надзвичайний інтер’єр та екстер’єр. Все супер! Особливе
-                        дякую хочу передати офіціанту Максиму, він просто душка.</p>
-                </div>
-            </div>
-            <div class="restaurant-reviews-carousel__cell">
-                <div class="res-review-item text-center">
-                    <img src="dist/img/review-person.png" alt="" class="res-review-item__image">
-                    <span class="heading heading-2 text-center res-review-item__name">Мар’ян Федишин</span>
-                    <p class="heading heading-5 res-review-item__txt">Ресторан Гопак це найкращий ресторан у місті
-                        Львові! Дуже смачне м’ясо та салати. Надзвичайний інтер’єр та екстер’єр. Все супер! Особливе
-                        дякую хочу передати офіціанту Максиму, він просто душка.</p>
-                </div>
-            </div>
-            <div class="restaurant-reviews-carousel__cell">
-                <div class="res-review-item text-center">
-                    <img src="dist/img/review-person.png" alt="" class="res-review-item__image">
-                    <span class="heading heading-2 text-center res-review-item__name">Мар’ян Федишин</span>
-                    <p class="heading heading-5 res-review-item__txt">Ресторан Гопак це найкращий ресторан у місті
-                        Львові! Дуже смачне м’ясо та салати. Надзвичайний інтер’єр та екстер’єр. Все супер! Особливе
-                        дякую хочу передати офіціанту Максиму, він просто душка.</p>
-                </div>
+                <div class="column col-lg-6"></div>
+                <div class="column col-lg-4"></div>
+                <div class="column col-lg-4"></div>
+                <div class="column col-lg-4"></div>
+                <div class="column col-xs-12"></div>
             </div>
         </div>
     </section>
@@ -497,27 +402,19 @@
 </footer>
 
 <!-- booking-modal -->
-<div class="modal" id="booking-modal">
+<div class="modal" id="hall-modal">
     <div class="modal__body">
-        <div class="modal__content booking-modal">
+        <div class="modal__content hall-modal">
             <span class="modal__close icon-close js-close-modal"></span>
-            <span class="heading heading-3 booking-modal__title">Зарезервувати столик</span>
-            <p class="app-txt-normal booking-modal__txt">Для того, щоб зарезрвувати столик, зателефонуйте нам за цим
-                телефоном</p>
-            <a href="tel:+380 93 115 12 61" class="heading heading-4 booking-modal__phone">+380 93 115 12 61</a>
         </div>
     </div>
 </div>
 
 <!-- libs -->
 <script src="dist/js/libs/jquery-3.2.1.min.js"></script>
-<script src="dist/js/libs/flickity.pkgd.min.js"></script>
 
 <!-- frontend -->
 <script src="dist/js/front.js"></script>
-<script>
-    slider.newSlider('.restaurant-carousel', {pageDots: true});
-    slider.newSlider('.restaurant-reviews-carousel', {});
-</script>
+
 </body>
 </html>
