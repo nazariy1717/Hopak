@@ -170,7 +170,7 @@
                                     <p>З нами весело та смачно</p>
                                 </div>
                             </div>
-                            <a href="/" class="btn btn-bordered">Зарезервувати столик</a>
+                            <a href="/" class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
                         </div>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
                                     <p>Смачні коктейлі, ароматні кальяни, улюблені музичні хіти  та приємна атмосфера.</p>
                                 </div>
                             </div>
-                            <a href="/" class="btn btn-bordered">Зарезервувати столик</a>
+                            <a href="/" class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
                         </div>
                     </div>
                 </div>
@@ -206,7 +206,7 @@
                                     <p>Смачні страви української , гуцульської, старогалицької та традиційної  кавказької кухні.</p>
                                 </div>
                             </div>
-                            <a href="/" class="btn btn-bordered">Зарезервувати столик</a>
+                            <a href="/" class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
                         </div>
                     </div>
                 </div>
@@ -224,7 +224,7 @@
                                     <p>Розслабляюча атмосфера після важкого робочого дня</p>
                                 </div>
                             </div>
-                            <a href="/" class="btn btn-bordered">Зарезервувати столик</a>
+                            <a href="/" class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
                         </div>
                     </div>
                 </div>
@@ -242,7 +242,7 @@
                                     <p>Готуємо смачні бізнес ланчі  під замовлення</p>
                                 </div>
                             </div>
-                            <a href="/" class="btn btn-bordered">Зарезервувати столик</a>
+                            <a href="/" class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
                         </div>
                     </div>
                 </div>
@@ -273,6 +273,18 @@
     </section>
 </main>
 
+<!-- booking-modal -->
+<div class="modal" id="booking-modal">
+    <div class="modal__body">
+        <div class="modal__content booking-modal">
+            <span class="modal__close icon-close js-close-modal"></span>
+            <span class="heading heading-3 booking-modal__title">Зарезервувати столик</span>
+            <p class="app-txt-normal booking-modal__txt">Для того, щоб зарезрвувати столик, зателефонуйте нам за цим
+                телефоном</p>
+            <a href="tel:+380 93 115 12 61" class="heading heading-4 booking-modal__phone">+380 93 115 12 61</a>
+        </div>
+    </div>
+</div>
 
 <!-- libs -->
 <script src="dist/js/libs/jquery-3.2.1.min.js"></script>
