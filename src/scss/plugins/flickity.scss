@@ -84,6 +84,9 @@
   border-radius: 0;
   padding: 0;
   transition: all 0.3s ease;
+  @media (max-width: $breakpoint-sm){
+    width: 45px;
+  }
   &:before{
     font-family: 'icomoon', sans-serif;
     position: absolute;
@@ -91,9 +94,16 @@
     top: 50%;
     transform: translate(-50%,-50%);
     font-size: 27px;
+    transition: all 0.3s;
+    @media (max-width: $breakpoint-sm){
+      font-size: 20px;
+    }
   }
   &:hover{
     background: linear-gradient(270deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 82.5%);
+    &:before{
+      color: var(--col-red)!important;
+    }
   }
 }
 
@@ -138,6 +148,10 @@
     background: var(--col-red);
     border-radius: 50%;
     cursor: pointer;
+    @media (max-width: $breakpoint-sm){
+      width: 10px;
+      height: 10px;
+    }
     &:before{
       content: '';
       @include absolute;
@@ -147,6 +161,10 @@
       border: 1px solid var(--col-red);
       transition: all 0.3s;
       transform: scale(1);
+      @media (max-width: $breakpoint-sm){
+        width: 10px;
+        height: 10px;
+      }
     }
     &.is-selected{
       &:before{
