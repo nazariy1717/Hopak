@@ -1,0 +1,43 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.banquet-wrapper{
+  margin-bottom: 80px;
+  @media (max-width: $breakpoint-sm){
+    margin-bottom: 50px;
+  }
+}
+
+.banquet-caption{
+  position: relative;
+  z-index: 1;
+  margin: 50px 0;
+  padding: 70px 0 70px 0;
+  @media (max-width: $breakpoint-sm){
+    margin: 30px 0;
+  }
+  &__overlay{
+    @include absolute;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  &__image{
+    @include absolute;
+    @include object-fit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+  }
+  &__title{
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    max-width: 995px;
+    margin: auto auto 100px;
+    @media (max-width: $breakpoint-sm){
+      margin: auto auto 50px;
+    }
+  }
+}

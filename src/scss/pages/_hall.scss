@@ -2,22 +2,13 @@
 @import "../tools/breakpoints";
 
 .hall-section{
-  padding-top: 80px;
-  @media (max-width: $breakpoint-sm){
-    padding-top: 50px;
-  }
   &__wrapper{
     margin-bottom: 70px;
     @media (max-width: $breakpoint-sm){
       margin-bottom: 40px;
     }
   }
-  &__title{
-    margin-bottom: 80px;
-    @media (max-width: $breakpoint-sm){
-      margin-bottom: 50px;
-    }
-  }
+
 }
 
 .hall-item{

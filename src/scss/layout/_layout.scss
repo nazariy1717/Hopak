@@ -37,4 +37,16 @@
 .page-wrapper{
   margin-top: 98px;
   min-height: calc(100vh - 98px);
+  &.--modifier{
+    margin-top: 178px;
+    @media (max-width: $breakpoint-sm){
+      margin-top: 148px;
+    }
+  }
+  &__title{
+    margin-bottom: 80px;
+    @media (max-width: $breakpoint-sm){
+      margin-bottom: 50px;
+    }
+  }
 }
