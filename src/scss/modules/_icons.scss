@@ -9,7 +9,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-paper-plane:before {
+  content: "\e903";
+}
 .icon-close:before {
   content: "\e902";
 }
