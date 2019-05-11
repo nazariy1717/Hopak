@@ -118,3 +118,9 @@
     .xl-offset-#{$i} {  margin-left: 8.333333% * $i; }
   }
 }
+
+@media (max-width: 991px){
+  .lg-hidden{
+    display: none;
+  }
+}
