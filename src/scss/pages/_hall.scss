@@ -3,15 +3,43 @@
 
 .hall-section{
   padding-top: 80px;
+  @media (max-width: $breakpoint-sm){
+    padding-top: 50px;
+  }
+  &__wrapper{
+    margin-bottom: 70px;
+    @media (max-width: $breakpoint-sm){
+      margin-bottom: 40px;
+    }
+  }
   &__title{
     margin-bottom: 80px;
+    @media (max-width: $breakpoint-sm){
+      margin-bottom: 50px;
+    }
   }
 }
 
 .hall-item{
   position: relative;
   height: 510px;
+  overflow: hidden;
   z-index: 1;
+  margin-bottom: 30px;
+  @media (max-width: $breakpoint-xl){
+    height: 385px;
+  }
+  @media (max-width: $breakpoint-lg){
+    height: 325px;
+  }
+  @media (max-width: $breakpoint-sm){
+    height: 290px;
+  }
+  &:hover{
+    .hall-item__image{
+      transform: scale(1.06);
+    }
+  }
   &__overlay{
     @include absolute;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 44.55%), linear-gradient(180deg, rgba(0, 0, 0, 0.6) 25.58%, rgba(0, 0, 0, 0) 67.88%);
@@ -19,6 +47,41 @@
   &__image{
     @include absolute;
     @include object-fit;
+    display: block;
+    width: 100%;
+    height: 100%;
     z-index: -1;
+    transition: all 0.3s;
+  }
+  &__title{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30px;
+    z-index: 3;
+    @media (max-width: $breakpoint-lg){
+      font-size: 25px;
+      line-height: 35px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  &__btn{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    z-index: 3;
+    margin: auto;
+    @media (max-width: $breakpoint-xl){
+      max-width: 275px;
+      font-size: 18px;
+    }
+    @media (max-width: $breakpoint-md){
+      left: 5px;
+      right: 5px;
+    }
   }
 }
