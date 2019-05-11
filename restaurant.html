@@ -314,10 +314,30 @@
 
     <section class="restaurant-reviews">
         <div class="container">
-            <h2 class="heading heading-2 text-center">Відгуки про ресторан</h2>
+            <h2 class="heading heading-2 text-center restaurant-reviews__title">Відгуки про ресторан</h2>
         </div>
         <div class="restaurant-reviews-carousel">
-            <div class="restaurant-reviews-carousel__cell"></div>
+            <div class="restaurant-reviews-carousel__cell">
+                <div class="res-review-item text-center">
+                    <img src="/dist/img/review-person.png" alt="" class="res-review-item__image">
+                    <span class="heading heading-2 text-center res-review-item__name">Ярослава Бондаренко</span>
+                    <p class="heading heading-5 res-review-item__txt">Ресторан Гопак це найкращий ресторан у місті Львові! Дуже смачне м’ясо та салати. Надзвичайний інтер’єр та екстер’єр. Все супер! Особливе дякую хочу передати офіціанту Максиму, він просто душка.</p>
+                </div>
+            </div>
+            <div class="restaurant-reviews-carousel__cell">
+                <div class="res-review-item text-center">
+                    <img src="/dist/img/review-person.png" alt="" class="res-review-item__image">
+                    <span class="heading heading-2 text-center res-review-item__name">Мар’ян Федишин</span>
+                    <p class="heading heading-5 res-review-item__txt">Ресторан Гопак це найкращий ресторан у місті Львові! Дуже смачне м’ясо та салати. Надзвичайний інтер’єр та екстер’єр. Все супер! Особливе дякую хочу передати офіціанту Максиму, він просто душка.</p>
+                </div>
+            </div>
+            <div class="restaurant-reviews-carousel__cell">
+                <div class="res-review-item text-center">
+                    <img src="/dist/img/review-person.png" alt="" class="res-review-item__image">
+                    <span class="heading heading-2 text-center res-review-item__name">Мар’ян Федишин</span>
+                    <p class="heading heading-5 res-review-item__txt">Ресторан Гопак це найкращий ресторан у місті Львові! Дуже смачне м’ясо та салати. Надзвичайний інтер’єр та екстер’єр. Все супер! Особливе дякую хочу передати офіціанту Максиму, він просто душка.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -335,6 +355,7 @@
 <script src="dist/js/front.js"></script>
 <script>
     slider.newSlider('.restaurant-carousel', {pageDots: true});
+    slider.newSlider('.restaurant-reviews-carousel',{});
 </script>
 </body>
 </html>

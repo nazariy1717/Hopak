@@ -128,3 +128,68 @@
     margin: auto;
   }
 }
+
+.restaurant-reviews{
+  margin-bottom: 175px;
+  &__title{
+    margin-bottom: 50px;
+  }
+}
+
+.restaurant-reviews-carousel{
+  &__cell{
+    width: 915px;
+    margin: 0 15px;
+    padding-top: 60px;
+    @media (max-width: $breakpoint-xl){
+      width: 700px;
+    }
+    &.is-selected{
+      .res-review-item{
+        background-color: var(--col-red);
+        &__name, &__txt{
+          color: var(--col-yellow);
+        }
+      }
+    }
+  }
+  .flickity-prev-next-button{
+    top: initial;
+    height: initial;
+    bottom: -65px;
+  }
+  .flickity-prev-next-button.next{
+    right: 42%;
+  }
+  .flickity-prev-next-button.previous{
+    left: 42%;
+  }
+}
+
+.res-review-item{
+  position: relative;
+  height: 390px;
+  padding: 110px 30px 30px 30px;
+  background-color: var(--col-yellow);
+  &__image{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__name{
+    display: block;
+    color: var(--col-brown);
+    transition: all 0.3s;
+    margin-bottom: 40px;
+  }
+  &__txt{
+    max-width: 715px;
+    margin: auto;
+    color: var(--col-brown);
+    transition: all 0.3s;
+  }
+}
