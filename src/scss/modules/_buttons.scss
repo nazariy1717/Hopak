@@ -24,6 +24,11 @@
   font-size: 25px;
   line-height: 85px;
   color: var(--col-white);
+  @media (max-width: 1600px){
+    max-width: 400px;
+    height: 75px;
+    line-height: 75px;
+  }
 }
 
 .btn-primary{
