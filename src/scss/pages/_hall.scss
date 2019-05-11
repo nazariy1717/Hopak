@@ -26,6 +26,7 @@
   overflow: hidden;
   z-index: 1;
   margin-bottom: 30px;
+  backface-visibility: hidden;
   @media (max-width: $breakpoint-xl){
     height: 385px;
   }

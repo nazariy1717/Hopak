@@ -126,55 +126,27 @@ strong, .bold{ font-weight: 700; }
 
 
 .text-content{
-  font-family: 'Brandon Grotesque', sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 28px;
-  color: var(--col-black);
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 35px;
+  color: var(--col-brown);
   @media (max-width: $breakpoint-sm){
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 15px;
+    line-height: 20px;
   }
   h1{
-    display: block;
-    font-family: 'Brandon Grotesque', sans-serif;
-    font-size: 36px;
-    line-height: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--col-black);
-    margin-bottom: 15px;
-    @media (max-width: $breakpoint-sm){
-      font-size: 30px;
-      line-height: 36px;
-    }
+    @extend .heading-1;
+    margin-bottom: 30px;
   }
   h2{
-    display: block;
-    font-family: 'Brandon Grotesque', sans-serif;
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--col-black);
-    margin-bottom: 15px;
-    @media (max-width: $breakpoint-sm){
-      font-size: 20px;
-      line-height: 28px;
-    }
+    @extend .heading-2;
+    margin-bottom: 30px;
   }
   h3{
-    display: block;
-    font-family: 'Brandon Grotesque', sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: bold;
-    color: var(--col-black);
-    margin-bottom: 15px;
-    @media (max-width: $breakpoint-sm){
-      font-size: 16px;
-      line-height: 24px;
-    }
+    @extend .heading-3;
+    margin-bottom: 30px;
   }
   p{
     margin-bottom: 10px;
@@ -182,7 +154,23 @@ strong, .bold{ font-weight: 700; }
   ul{
     padding: 0 0 0 20px;
     margin-bottom: 15px;
-    list-style-type: disc;
+    list-style-type: none;
+    text-align: left;
+    li{
+      position: relative;
+      padding-left: 20px;
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--col-brown);
+      }
+    }
   }
   ol{
     padding: 0 0 0 20px;
