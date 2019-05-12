@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Delivery Page</title>
+    <title>Contacts Page</title>
     <link href="dist/css/build.css" rel="stylesheet">
 </head>
 <body>
@@ -316,32 +316,63 @@
 </header>
 
 <!-- page-wrapper-->
-<main class="page-wrapper --modifier">
-    <section class="section banquet-wrapper">
+<main class="page-wrapper">
+    <section class="section">
         <div class="container">
-            <h1 class="heading heading-1 brown page-wrapper__title">Доставка та оплата</h1>
-
-            <div class="row m-row align-middle">
-                <div class="column col-lg-6 col-xs-12">
-                    <div class="app-txt">
-                        <p>Сервіс доставки ресторану «ГОПАК» пропонує надзвичайно зручний механізм доставки і оплати. Ми вважаємо, що наші стандарти роботи повинні бути класикою і комфортом для замовника.</p>
-                        <br>
-                        <p>Отже, почнемо з доставки. Ми ділимо Львів на дві зони доставки - зелену і червону. Для кожної зони ми чітко визначаємо час приїзду кур'єра і в разі затримки Ви отримуєте приємний сюрприз, про який трохи пізніше.</p>
-                        <br>
-                        <p>Доставка в зелену зону Львова - до 29 хвилин. Доставка в червону зону - до 59 хвилин. Ми дуже цінуємо Ваш час, тому завжди намагаємося вкластися в мінімальні терміни і вимірюємо час хвилинами, адже кожна хвилина важлива. Погодьтеся, приємно отримати смачну, гарячу і ароматну піцу протягом  29 хвилин, правда?</p>
-                        <br>
+            <div class="row m-row">
+                <div class="column col-lg-5 col-xs-12">
+                    <div class="contact">
+                        <h1 class="heading heading-1 brown contact__title">Контакти</h1>
+                        <ul class="contact-list row m-row">
+                            <li class="contact-list__item column col-sm-6 col-xs-12">
+                                <span class="contact-list__title app-txt">Адреса</span>
+                                <p class="contact-list__txt app-txt">м. Львів, вул. Наукова 2б</p>
+                            </li>
+                            <li class="contact-list__item column col-sm-6 col-xs-12">
+                                <span class="contact-list__title app-txt">Час роботи</span>
+                                <p class="contact-list__txt app-txt">Пн — Нд <br>11:00 — 00:00</p>
+                            </li>
+                            <li class="contact-list__item column col-sm-6 col-xs-12">
+                                <span class="contact-list__title app-txt">Телефон</span>
+                                <a href="tel:+380 67 112 4369" class="contact-list__txt app-txt">+380 67 112 4369</a>
+                            </li>
+                            <li class="contact-list__item column col-sm-6 col-xs-12">
+                                <span class="contact-list__title app-txt">Соціальні мережі</span>
+                                <ul class="contact-soc-list">
+                                    <li class="contact-soc-list__item">
+                                        <a href="/" class="contact-soc-list__link">
+                                            <i class="icon-instagram"></i>
+                                            <span>instagram</span>
+                                        </a>
+                                    </li>
+                                    <li class="contact-soc-list__item">
+                                        <a href="/" class="contact-soc-list__link">
+                                            <i class="icon-facebook"></i>
+                                            <span>facebook</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="contact-form">
+                            <form action="/" id="contact-form">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-input" placeholder="Ваше ім’я">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-input" placeholder="Ваш Email">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" class="form-textarea" placeholder="Ваше ім’я"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary --type-1">Надіслати повідомлення</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <div class="column col-lg-6 col-xs-12 lg-hidden">
-                    <img src="dist/img/hall-item.jpg" class="image" alt="">
-                </div>
-            </div>
-            <div class="row m-row align-middle">
-                <div class="column col-xs-12">
-                    <img src="dist/img/hall-item.jpg" class="image" alt="">
                 </div>
             </div>
         </div>
+        <div id="contact-map"></div>
     </section>
 
 </main>
@@ -454,9 +485,102 @@
 
 <!-- libs -->
 <script src="dist/js/libs/jquery-3.2.1.min.js"></script>
-
 <!-- frontend -->
 <script src="dist/js/front.js"></script>
+<script>
+    function initMap() {
+        let uluru = {lat: 49.803128, lng: 24.010596};
+        let map = new google.maps.Map(document.getElementById('contact-map'), {
+            zoom: 18,
+            center: uluru,
+            styles: [
+                {
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#ff02ff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative.land_parcel",
+                    "elementType": "labels",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "stylers": [
+                        {
+                            "color": "#f4e8d8"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape.man_made",
+                    "stylers": [
+                        {
+                            "color": "#f1e3b3"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels.text",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "elementType": "labels",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                }
+            ]
+        });
 
+        let marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            icon: '/dist/img/marker.png',
+        });
+
+    }
+</script>
+<!--todo потрібно поставити свій апі кей бо в мене всі полетіли-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3b1gPEjeBRZJXI5DJyCE4RJl-4PULenI&callback=initMap"></script>
 </body>
 </html>
