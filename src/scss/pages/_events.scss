@@ -4,3 +4,11 @@
 .events-wrapper{
   margin-bottom: 50px;
 }
+
+.event-item{
+  &__overlay{
+    @include absolute;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.6);
+  }
+}

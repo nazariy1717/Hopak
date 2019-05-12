@@ -179,6 +179,45 @@
       margin: 0 0 30px;
     }
   }
+  &__carousel-wrapper{
+    position: relative;
+  }
+  &__caption{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 130px;
+    height: 125px;
+    z-index: 3;
+    padding: 12px 0;
+    text-align: center;
+    color: #fff;
+    background-color: var(--col-red);
+    @media (max-width: $breakpoint-sm){
+      width: 90px;
+      height: 90px;
+    }
+  }
+  &__caption-title{
+    display: block;
+    font-weight: 600;
+    font-size: 51px;
+    line-height: 52px;
+    @media (max-width: $breakpoint-sm){
+      font-size: 32px;
+      line-height: 34px;
+    }
+  }
+  &__caption-txt{
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    @media (max-width: $breakpoint-sm){
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
   &__carousel{
     margin-bottom: 50px;
     @media (max-width: $breakpoint-sm){
