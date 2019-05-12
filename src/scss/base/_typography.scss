@@ -133,6 +133,10 @@ strong, .bold{ font-weight: 700; }
   display: block;
   font-size: 20px;
   line-height: 25px;
+  @media (max-width: $breakpoint-sm){
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 
 

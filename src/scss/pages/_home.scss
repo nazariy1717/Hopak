@@ -40,6 +40,17 @@
       height: 205px;
       margin: auto auto 20px;
     }
+    @media (max-height: 650px){
+      display: block;
+      width: 395px;
+      height: 115px;
+      margin: auto auto 20px;
+    }
+    @media (max-width: $breakpoint-sm){
+      width: 305px;
+      height: 115px;
+      margin: auto auto 15px;
+    }
   }
   &__desc{
     font-weight: 500;
@@ -52,6 +63,12 @@
     @media (max-height: 850px){
       margin: auto auto 30px;
     }
+    @media (max-width: $breakpoint-sm){
+      min-height: 75px;
+      font-size: 15px;
+      line-height: 25px;
+      margin: auto auto 15px;
+    }
   }
   &__btn{}
 }
@@ -61,11 +78,17 @@
   bottom: 35px;
   left: 0;
   right: 0;
+  @media (max-width: $breakpoint-sm){
+    text-align: center;
+  }
   &__soc{
     &-item{
       display: inline-block;
       & + &{
         margin-left: 25px;
+        @media (max-width: $breakpoint-sm){
+          margin-left: 10px;
+        }
       }
     }
     &-link{
@@ -73,6 +96,9 @@
       font-size: 25px;
       color: var(--col-white);
       transition: all 0.3s;
+      @media (max-width: $breakpoint-sm){
+        font-size: 15px;
+      }
       &:hover{
         color: var(--col-brown);
       }
@@ -83,5 +109,8 @@
   }
   &__address{
     text-align: right;
+    @media (max-width: $breakpoint-sm){
+      text-align: center;
+    }
   }
 }
