@@ -9,6 +9,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-quotes-left:before {
+  content: "\e977";
+}
 .icon-paper-plane:before {
   content: "\e903";
 }

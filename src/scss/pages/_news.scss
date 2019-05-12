@@ -1,7 +1,6 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
-
 .news-wrapper{
   margin-bottom: 50px;
 }
@@ -183,6 +182,119 @@
       i{
         color: var(--col-white);
       }
+    }
+  }
+}
+
+.post-top{
+  position: relative;
+  height: 700px;
+  margin-bottom: 80px;
+  @media (max-width: $breakpoint-xl){
+    height: 450px;
+  }
+  @media (max-width: $breakpoint-sm){
+    height: 375px;
+  }
+  @media (max-width: $breakpoint-sm){
+    margin-bottom: 50px;
+  }
+  img{
+    @include absolute;
+    @include object-fit;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.post-content{
+  max-width: 1230px;
+  margin: auto;
+  padding: 0 15px 100px 15px;
+  border-bottom: 1px solid var(--col-brown);
+  @media (max-width: $breakpoint-sm){
+    padding: 0 15px 50px 15px;
+  }
+  &__title{
+    position: relative;
+    margin-bottom: 40px;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      width: 140px;
+      height: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--col-brown);
+    }
+  }
+  &__date{
+    display: block;
+    text-align: center;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.post-slider{
+  margin: 50px 0;
+  @media (max-width: $breakpoint-sm){
+    margin: 30px 0;
+  }
+  &__cell{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    @media (max-width: $breakpoint-xl){
+      height: 400px;
+    }
+    @media (max-width: $breakpoint-sm){
+      height: 300px;
+    }
+    img{
+      @include absolute;
+      @include object-fit;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.post-suggest{
+  padding: 100px 0 70px 0;
+  @media (max-width: $breakpoint-sm){
+    padding: 50px 0;
+  }
+  &__title{
+    margin-bottom: 30px;
+  }
+}
+
+.suggest-item{
+  position: relative;
+  margin-bottom: 30px;
+  &__img{
+    display: block;
+    width: 100%;
+    height: 500px;
+    @include object-fit;
+    margin-bottom: 30px;
+    @media (max-width: 1440px){
+      height: 400px;
+    }
+    @media (max-width: $breakpoint-xl){
+      height: 275px;
+    }
+    @media (max-width: $breakpoint-lg){
+      height: 275px;
+    }
+    @media (max-width: $breakpoint-sm){
+      height: 225px;
+      margin-bottom: 15px;
     }
   }
 }
