@@ -1,0 +1,49 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.vacancy-item{
+  position: relative;
+  background: var(--col-light-yellow);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  backface-visibility: hidden;
+  margin-bottom: 30px;
+  &__img{
+    display: block;
+    height: 420px;
+    width: 100%;
+    @include object-fit;
+  }
+  &__content{
+    padding: 30px 30px 40px 30px;
+  }
+  &__title{
+    display: block;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 30px;
+  }
+  &__list{
+    margin-bottom: 45px;
+  }
+  &__item{
+    & + & {
+      margin-left: 80px;
+    }
+    display: inline-block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    span{
+      font-weight: 600;
+    }
+  }
+  &__txt{
+    height: 100px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    &.--hidden{
+      background-image: linear-gradient(#EAE3CB, #EAE3CB);
+    }
+  }
+}

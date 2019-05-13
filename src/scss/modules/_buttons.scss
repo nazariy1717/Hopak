@@ -25,6 +25,7 @@
   font-size: 25px;
   line-height: 85px;
   color: var(--col-white);
+  transition: all 0.3s;
   @media (max-width: 1600px){
     max-width: 400px;
     height: 75px;
@@ -42,9 +43,25 @@
     line-height: 50px;
     font-size: 15px;
   }
+  &:hover{
+    background: var(--col-white);
+    color: #333333;
+  }
   &.--red{
     border: 1px solid var(--col-red);
     color: var(--col-red);
+    &:hover{
+      background: var(--col-red);
+      color: #fff;
+    }
+  }
+  &.--brown{
+    border: 1px solid var(--col-brown);
+    color: var(--col-brown);
+    &:hover{
+      background: var(--col-brown);
+      color: #fff;
+    }
   }
 }
 
