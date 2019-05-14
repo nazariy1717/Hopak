@@ -1,5 +1,5 @@
  let frontend = {
-     hamburger: $('.header-hamburger'),
+     hamburger: $('.hamburger'),
      header: $('.header'),
      nav: $('.header-list'),
 
@@ -23,7 +23,7 @@
     events: function(){
          let self = this;
 
-        $(document).on('click', '.header-hamburger', function () {
+        $(document).on('click', '.hamburger', function () {
             self.toggleNav();
         });
 
