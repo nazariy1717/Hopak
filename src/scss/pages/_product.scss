@@ -1,6 +1,11 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
+
+.product-sidebar{
+  position: sticky;
+}
+
 .product-content{
 
 }
@@ -8,5 +13,179 @@
 .product-item{
   position: relative;
   overflow: hidden;
+  background: var(--col-light-yellow);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  backface-visibility: hidden;
   margin-bottom: 30px;
+  &:hover{
+    .product-item__img{
+      transform: translateY(-60px);
+    }
+    .product-item__content{
+      transform: translateY(-60px);
+    }
+    .product-item-buy{
+      transform: translateY(0);
+    }
+    @media (max-width: $breakpoint-xl){
+      .product-item__img{
+        transform: translateY(0);
+      }
+      .product-item__content{
+        transform: translateY(0);
+      }
+    }
+  }
+  &__img{
+    display: block;
+    @include object-fit;
+    width: 100%;
+    height: 340px;
+    transition: all 0.3s ease-in-out;
+    @media (max-width: 1680px){
+      height: 245px;
+    }
+  }
+  &__content{
+    padding: 20px 30px 30px;
+    transition: all 0.3s ease-in-out;
+    @media (max-width: 1680px){
+      padding: 20px;
+    }
+  }
+  &__top{
+    margin-bottom: 15px;
+  }
+  &__weight{
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  &__price{
+    display: block;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    @media (max-width: 1680px){
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+  &__name{
+    display: block;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 25px;
+    @media (max-width: 1680px){
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+  }
+  &__txt{
+    @include text-ellipsis(3);
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    height: 75px;
+  }
+}
+
+.product-item-buy{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(60px);
+  background-color: var(--col-red);
+  transition: all 0.3s ease-in-out;
+  padding: 0 30px;
+  @media (max-width: 1680px){
+    padding: 0 8px;
+  }
+  @media (max-width: $breakpoint-xl){
+    position: relative;
+    transform: translateY(0);
+  }
+  &__row{
+    height: 60px;
+  }
+  &__button{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 35px;
+    cursor: pointer;
+    color: var(--col-yellow);
+    @media (max-width: 1680px){
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+  &__price{
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: right;
+    color: var(--col-yellow);
+    @media (max-width: 1680px){
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+}
+
+.product-item-spinner{
+  position: relative;
+  width: 85px;
+  height: 30px;
+  @media (max-width: 1680px){
+    width: 65px;
+  }
+  &__input{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 25px;
+    width: 35px;
+    height: 30px;
+    outline: none;
+    border: 0;
+    font-weight: normal;
+    font-size: 18px;
+    color: #604516;
+    padding: 0 10px;
+    pointer-events: auto;
+    background: var(--col-yellow);
+    @media (max-width: 1680px){
+      left: 15px;
+    }
+  }
+  &__btn{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15px;
+    height: 30px;
+    text-align: center;
+    line-height: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    padding: 0;
+    color: var(--col-yellow);
+    transition: all 0.3s;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    &.--minus{
+      left: 0;
+    }
+    &.--plus{
+      right: 0;
+    }
+  }
 }
