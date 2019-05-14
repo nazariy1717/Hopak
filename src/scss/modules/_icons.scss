@@ -9,6 +9,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-arrow-down:before {
+  content: "\e904";
+}
+.icon-cart:before {
+  content: "\e905";
+}
 .icon-quotes-left:before {
   content: "\e977";
 }

@@ -281,14 +281,14 @@
 <header class="header">
     <div class="container">
         <div class="header__row row m-row align-justify align-middle">
-            <div class="column">
+            <div class="header__column">
                 <a href="/">
                     <svg class="inline-svg-icon header__logo">
                         <use xlink:href="#header-logo"></use>
                     </svg>
                 </a>
             </div>
-            <div class="column">
+            <div class="header__column">
                 <ul class="header-list">
                     <li class="header-list__item">
                         <a href="/" class="header-list__link active">РЕСТОРАН</a>
@@ -310,13 +310,38 @@
                     </li>
                 </ul>
             </div>
-            <div class="column"></div>
+            <div class="header__column">
+                <div class="sub-header">
+                    <a href="/delivery.html" class="sub-header__link">ЗАМОВИТИ ДОСТАВКУ</a>
+                    <div class="header-cart">
+                        <i class="icon icon-cart header-cart__icon"></i>
+                        <span class="header-cart__count">10</span>
+                        <span class="header-cart__price">1999 грн</span>
+                    </div>
+                    <div class="header-language">
+                        <a class="header-language__active">
+                            <i class="header-language__flag"></i>
+                            <span class="header-language__txt">УКР</span>
+                            <i class="icon icon-arrow-down header-language__arrow"></i>
+                        </a>
+                        <ul class="header-language__list">
+                            <li class="header-language__item">
+                                <a href="/ru" class="header-language__link">ENG</a>
+                            </li>
+                            <li class="header-language__item">
+                                <a href="/en" class="header-language__link">RUS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </header>
 
 <!-- page-wrapper-->
 <main class="page-wrapper --modifier">
+
     <section class="section">
         <div class="container">
             <h1 class="heading heading-1 brown page-wrapper__title">Меню</h1>
@@ -473,6 +498,7 @@
             </div>
         </div>
     </section>
+
 </main>
 
 <!-- footer -->

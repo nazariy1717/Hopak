@@ -157,8 +157,8 @@
     font-weight: normal;
     font-size: 18px;
     color: #604516;
-    padding: 0 10px;
-    pointer-events: auto;
+    padding: 0 5px;
+    pointer-events: none;
     background: var(--col-yellow);
     @media (max-width: 1680px){
       left: 15px;
