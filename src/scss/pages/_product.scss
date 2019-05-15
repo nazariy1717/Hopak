@@ -5,8 +5,10 @@
 
 .product-sidebar{
   position: sticky;
+  top: 100px;
   @media (max-width: $breakpoint-lg){
     position: relative;
+    top: initial;
     margin-bottom: 30px;
   }
 }
