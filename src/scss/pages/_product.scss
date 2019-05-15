@@ -1,8 +1,6 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
-
-
 .product-sidebar{
   position: sticky;
   top: 100px;
@@ -247,6 +245,11 @@
   position: relative;
   width: 85px;
   height: 30px;
+  &.--modifier{
+    .product-item-spinner__btn{
+      color: var(--col-brown);
+    }
+  }
   @media (max-width: 1680px){
     width: 65px;
   }

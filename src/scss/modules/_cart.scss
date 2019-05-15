@@ -1,0 +1,163 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.cart{
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 630px;
+  z-index: 999;
+  transform: translateX(100%);
+  background: var(--col-light-yellow);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 98px;
+  @media (max-width: $breakpoint-sm){
+    padding-bottom: 75px;
+  }
+}
+
+.cart-top{
+  position: relative;
+  height: 98px;
+  background-color: #E4D2BB;
+  @media (max-width: $breakpoint-sm){
+    height: 75px;
+  }
+  &__title{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+  }
+  &__close{
+    position: absolute;
+    right: 30px;
+    transition: all 0.3s ease-in-out;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    &:hover{
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
+
+.cart-content{
+  position: absolute;
+  left: 0;
+  right: -17px;
+  padding-right: 17px;
+  overflow: auto;
+  height: calc(100vh - 98px - 98px);
+  @media (max-width: $breakpoint-sm){
+    height: calc(100vh - 75px - 75px);
+  }
+}
+
+.cart-product{
+  position: relative;
+  padding: 30px 30px 20px;
+  border-bottom: 1px solid #E4D2BB;
+  &__image-column{
+    @include grid-size(180px);
+    img{
+      display: block;
+      width: 100%;
+      height: 125px;
+      @include object-fit;
+    }
+  }
+  &__content-column{
+    @include grid-size(calc(100% - 180px));
+  }
+  &__name{
+    display: block;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+  &__txt{
+    @include text-ellipsis(3);
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+  &__price{
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 35px;
+  }
+  &__remove{
+    display: block;
+    padding-left: 22px;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--col-red);
+    i{
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+      display: block;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover{
+      i{
+        transform: translateY(-50%) rotate(-180deg);
+      }
+    }
+  }
+}
+
+.cart-bottom{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 98px;
+  @media ($breakpoint-sm){
+    height: 75px;
+  }
+  &__price{
+    display: block;
+    @include grid-size(26%);
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    padding: 31px 0;
+    color: var(--col-yellow);
+    background-color: var(--col-red);
+    @media (max-width: 1440px){
+      font-size: 25px;
+    }
+  }
+  &__btn{
+    display: block;
+    @include grid-size(74%);
+    background: #E4D2BB;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 31px 0;
+    @media (max-width: 1440px){
+      font-size: 25px;
+    }
+  }
+}

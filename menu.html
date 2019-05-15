@@ -313,7 +313,7 @@
             <div class="header__column">
                 <div class="sub-header">
                     <a href="/delivery.html" class="sub-header__link">ЗАМОВИТИ ДОСТАВКУ</a>
-                    <div class="header-cart">
+                    <div class="header-cart js-show-cart">
                         <i class="icon icon-cart header-cart__icon"></i>
                         <span class="header-cart__count">10</span>
                         <span class="header-cart__price">1999 грн</span>
@@ -537,7 +537,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -546,6 +545,71 @@
     </section>
 
 </main>
+
+<div class="cart">
+    <div class="cart-top">
+        <span class="cart-top__title">Корзина</span>
+        <span class="icon icon-close cart-top__close"></span>
+    </div>
+    <div class="cart-content">
+        <div class="cart-product">
+            <div class="row m-row">
+                <div class="column cart-product__image-column">
+                    <img src="dist/img/product.jpg" alt="">
+                </div>
+                <div class="column cart-product__content-column">
+                    <span class="cart-product__name">Карпатські гомбовці</span>
+                    <p class="cart-product__txt">Карп, сом, окунь, солодкий перець, спілі помідори, гострий перецьчасник, молота паприка, лапша гострий перець, кріп, </p>
+                    <div class="row m-row-sm align-middle align-justify">
+                        <div class="column-sm">
+                            <div class="product-item-spinner --modifier">
+                                <button class="product-item-spinner__btn --minus js-product-minus">-</button>
+                                <input type="text" name="count" class="product-item-spinner__input" value="0">
+                                <button class="product-item-spinner__btn --plus js-product-plus">+</button>
+                            </div>
+                        </div>
+                        <div class="column-sm">
+                            <span class="cart-product__price">189 грн</span>
+                        </div>
+                        <div class="column-sm">
+                            <a href="" class="cart-product__remove"><i class="icon icon-close"></i>Видалити</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-product">
+            <div class="row m-row">
+                <div class="column cart-product__image-column">
+                    <img src="dist/img/product.jpg" alt="">
+                </div>
+                <div class="column cart-product__content-column">
+                    <span class="cart-product__name">Карпатські гомбовці</span>
+                    <p class="cart-product__txt">Карп, сом, окунь, солодкий перець, спілі помідори, гострий перецьчасник, молота паприка, лапша гострий перець, кріп, </p>
+                    <div class="row m-row-sm align-middle align-justify">
+                        <div class="column-sm">
+                            <div class="product-item-spinner --modifier">
+                                <button class="product-item-spinner__btn --minus js-product-minus">-</button>
+                                <input type="text" name="count" class="product-item-spinner__input" value="0">
+                                <button class="product-item-spinner__btn --plus js-product-plus">+</button>
+                            </div>
+                        </div>
+                        <div class="column-sm">
+                            <span class="cart-product__price">189 грн</span>
+                        </div>
+                        <div class="column-sm">
+                            <a href="" class="cart-product__remove"><i class="icon icon-close"></i>Видалити</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-bottom">
+        <span class="cart-bottom__price">3021 грн</span>
+        <a class="cart-bottom__btn">Оформити замовлення</a>
+    </div>
+</div>
 
 <!-- footer -->
 <footer class="footer">
@@ -653,7 +717,6 @@
     </div>
 </footer>
 
-
 <!-- libs -->
 <script src="dist/js/libs/jquery-3.2.1.min.js"></script>
 <script src="dist/js/libs/flickity.pkgd.min.js"></script>
@@ -673,7 +736,6 @@
             list.slideToggle();
             parent.addClass('active');
         }
-
     });
 
 
