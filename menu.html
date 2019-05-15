@@ -358,15 +358,50 @@
             <h1 class="heading heading-1 brown page-wrapper__title">Меню</h1>
 
             <div class="row m-row">
-                <div class="column col-xl-2">
+                <div class="column col-xl-2 col-lg-3 col-md-3 col-xs-12">
                     <div class="product-sidebar">
-
+                        <ul class="product-sidebar-list">
+                            <li class="product-sidebar-list__item active">
+                                <a class="product-sidebar-list__link js-drop-menu">Закуски<i class="icon icon-arrow-down product-sidebar-list__arrow"></i></a>
+                                <ul class="product-sidebar-list-sublist">
+                                    <li class="product-sidebar-list__item">
+                                        <a href="/" class="product-sidebar-list__link">Холодні закуски</a>
+                                    </li>
+                                    <li class="product-sidebar-list__item">
+                                        <a href="/" class="product-sidebar-list__link">Гарячі закуски</a>
+                                    </li>
+                                    <li class="product-sidebar-list__item">
+                                        <a href="/" class="product-sidebar-list__link">Гарячі закуски</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="product-sidebar-list__item">
+                                <a href="/" class="product-sidebar-list__link">Хліб та до хліба</a>
+                            </li>
+                            <li class="product-sidebar-list__item">
+                                <a class="product-sidebar-list__link js-drop-menu">Гарячі страви<i class="icon icon-arrow-down product-sidebar-list__arrow"></i></a>
+                                <ul class="product-sidebar-list-sublist">
+                                    <li class="product-sidebar-list__item">
+                                        <a href="/" class="product-sidebar-list__link">Холодні закуски</a>
+                                    </li>
+                                    <li class="product-sidebar-list__item">
+                                        <a href="/" class="product-sidebar-list__link">Гарячі закуски</a>
+                                    </li>
+                                    <li class="product-sidebar-list__item">
+                                        <a href="/" class="product-sidebar-list__link">Гарячі закуски</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="product-sidebar-list__item">
+                                <a href="/" class="product-sidebar-list__link">Перші страви</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="column col-xl-10">
+                <div class="column col-xl-10 col-lg-9 col-md-9 col-xs-12">
                     <div class="product-content">
                         <div class="row m-row">
-                            <div class="column col-xl-4 col-lg-6">
+                            <div class="column col-xl-4 col-sm-6 col-xs-12">
                                 <div class="product-item">
                                     <img src="dist/img/product.jpg" class="product-item__img" alt="">
                                     <div class="product-item__content">
@@ -400,7 +435,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="column col-xl-4 col-lg-6">
+                            <div class="column col-xl-4 col-sm-6 col-xs-12">
                                 <div class="product-item">
                                     <img src="dist/img/product.jpg" class="product-item__img" alt="">
                                     <div class="product-item__content">
@@ -434,7 +469,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="column col-xl-4 col-lg-6">
+                            <div class="column col-xl-4 col-sm-6 col-xs-12">
                                 <div class="product-item">
                                     <img src="dist/img/product.jpg" class="product-item__img" alt="">
                                     <div class="product-item__content">
@@ -468,7 +503,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="column col-xl-4 col-lg-6">
+                            <div class="column col-xl-4 col-sm-6 col-xs-12">
                                 <div class="product-item">
                                     <img src="dist/img/product.jpg" class="product-item__img" alt="">
                                     <div class="product-item__content">
@@ -626,6 +661,21 @@
 <!-- frontend -->
 <script src="dist/js/front.js"></script>
 <script>
+    $(document).on('click', '.js-drop-menu', function(){
+        let parent = $(this).parent();
+        let list = $(this).parent().find('.product-sidebar-list-sublist');
+        if (parent.hasClass('active')){
+            list.slideUp(function(){
+                parent.removeClass('active');
+
+            });
+        } else{
+            list.slideToggle();
+            parent.addClass('active');
+        }
+
+    });
+
 
     $(document).on('click', '.js-product-minus', function(){
         let input =  $(this).parent().find('.product-item-spinner__input');
