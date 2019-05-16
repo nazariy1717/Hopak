@@ -1,20 +1,50 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
+.vacancy-wrapper{
+  margin-bottom: 120px;
+}
+
+.vacancy-item-row{
+  @media (max-width: $breakpoint-lg){
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
 .vacancy-item{
   position: relative;
   background: var(--col-light-yellow);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   backface-visibility: hidden;
   margin-bottom: 30px;
+  @media (max-width: $breakpoint-lg){
+    @include grid-size(48%);
+  }
+  @media (max-width: $breakpoint-sm){
+    @include grid-size(100%);
+  }
   &__img{
     display: block;
     height: 420px;
     width: 100%;
     @include object-fit;
+    @media (max-width: $breakpoint-xl){
+      height: 275px;
+    }
+    @media (max-width: $breakpoint-lg){
+      height: 225px;
+    }
   }
   &__content{
     padding: 30px 30px 40px 30px;
+    @media (max-width: $breakpoint-xl){
+      padding: 20px 20px 30px 20px;
+    }
+    @media (max-width: $breakpoint-md){
+      padding: 15px;
+    }
   }
   &__title{
     display: block;
@@ -22,28 +52,94 @@
     font-size: 30px;
     line-height: 35px;
     margin-bottom: 30px;
+    @media (max-width: $breakpoint-xl){
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: $breakpoint-md){
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 15px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 10px;
+    }
   }
   &__list{
     margin-bottom: 45px;
+    @media (max-width: $breakpoint-xl){
+      margin-bottom: 30px;
+    }
   }
   &__item{
     & + & {
       margin-left: 80px;
+      @media (max-width: $breakpoint-xl){
+        margin-left: 0;
+      }
     }
     display: inline-block;
     font-weight: 500;
     font-size: 20px;
     line-height: 25px;
+    @media (max-width: $breakpoint-xl){
+      display: block;
+      font-size: 15px;
+      line-height: 25px;
+    }
     span{
       font-weight: 600;
     }
   }
   &__txt{
-    height: 100px;
+    position: relative;
     overflow: hidden;
-    margin-bottom: 30px;
+    transition: height 0.3s ease-in-out;
     &.--hidden{
-      background-image: linear-gradient(#EAE3CB, #EAE3CB);
+      height: 105px;
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        background-image: linear-gradient(rgba(234, 227, 203, 0.7), rgb(234, 227, 203));
+      }
+      @media (max-width: $breakpoint-xl){
+        font-size: 15px;
+        line-height: 25px;
+        height: 75px;
+      }
     }
+  }
+  &__btn{
+    margin-top: 30px;
+    @media (max-width: $breakpoint-lg){
+      font-size: 15px;
+    }
+    @media (max-width: $breakpoint-md){
+      margin-top: 15px;
+    }
+  }
+}
+
+.vacancy-form-wrapper{
+  position: sticky;
+  top: 100px;
+}
+.vacancy-form{
+  &__title{
+    margin-bottom: 30px;
+  }
+  &__subtitle{
+    margin-bottom: 30px;
+  }
+  .form-input, .form-select, .form-textarea, .form-file{
+    max-width: 100%;
   }
 }

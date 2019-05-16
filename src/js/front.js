@@ -5,6 +5,7 @@
 
     init: function(){
         this.events();
+        $('.phone-mask').mask("+38 (000) 00 00 000", {placeholder: "+38 (___) ___-__-__"});
     },
 
     toggleNav: function () {
@@ -22,6 +23,7 @@
 
     events: function(){
          let self = this;
+
 
         $(document).on('click', '.hamburger', function () {
             self.toggleNav();

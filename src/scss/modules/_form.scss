@@ -41,6 +41,7 @@ input[type=number]::-webkit-outer-spin-button {
   @media (max-width: 1380px){
     height: 60px;
     line-height: 60px;
+    font-size: 15px;
   }
   @media (max-width: $breakpoint-sm){
     height: 50px;
@@ -49,7 +50,40 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
-.form-select{}
+.form-select{
+  max-width: 525px;
+  width: 100%;
+  height: 70px;
+  padding: 0 30px;
+  line-height: 70px;
+  outline: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--col-brown);
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--col-yellow);
+  border: 1px solid #D4CCB3;
+  box-sizing: border-box;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  background-image: url(../img/dropdown.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+  &:focus, &:active{
+    border: 1px solid var(--col-brown);
+  }
+  @media (max-width: 1380px){
+    height: 60px;
+    line-height: 60px;
+    font-size: 15px;
+  }
+  @media (max-width: $breakpoint-sm){
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+  }
+}
 
 .form-textarea{
   max-width: 525px;
@@ -71,11 +105,48 @@ input[type=number]::-webkit-outer-spin-button {
   &:focus, &:active{
     border: 1px solid var(--col-brown);
   }
+  @media (max-width: 1380px){
+    font-size: 15px;
+  }
   @media (max-width: $breakpoint-md){
     height: 175px;
   }
   @media (max-width: $breakpoint-sm){
     height: 150px;
+  }
+}
+
+.form-file{
+  display: block;
+  max-width: 525px;
+  width: 100%;
+  height: 70px;
+  padding: 0 30px;
+  line-height: 70px;
+  outline: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--col-brown);
+  font-family: 'Montserrat', sans-serif;
+  background: var(--col-yellow);
+  border: 1px solid #D4CCB3;
+  border-radius: 3px;
+  &:focus, &:active{
+    border: 1px solid var(--col-brown);
+  }
+  @media (max-width: 1380px){
+    height: 60px;
+    line-height: 60px;
+    font-size: 15px;
+  }
+  @media (max-width: 1380px){
+    font-size: 15px;
+  }
+  @media (max-width: $breakpoint-sm){
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
   }
 }
 
@@ -86,7 +157,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 20px;
   color: var(--col-brown);
   font-family: 'Montserrat', sans-serif;
-  @media (max-width: $breakpoint-sm){
+  @media (max-width: 1380px){
     font-size: 15px;
   }
 }
@@ -96,7 +167,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 20px;
   color: var(--col-brown);
   font-family: 'Montserrat', sans-serif;
-  @media (max-width: $breakpoint-sm){
+  @media (max-width: 1380px){
     font-size: 15px;
   }
 }
@@ -106,7 +177,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 20px;
   color: var(--col-brown);
   font-family: 'Montserrat', sans-serif;
-  @media (max-width: $breakpoint-sm){
+  @media (max-width: 1380px){
     font-size: 15px;
   }
 }
@@ -116,7 +187,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 20px;
   color: var(--col-brown);
   font-family: 'Montserrat', sans-serif;
-  @media (max-width: $breakpoint-sm){
+  @media (max-width: 1380px){
     font-size: 15px;
   }
 }
