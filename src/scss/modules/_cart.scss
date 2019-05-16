@@ -1,6 +1,21 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
+.cart-background{
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 991;
+  background-color: rgba(0,0,0,0.3);
+  transition: all 0.3s ease-in-out;
+  &.active{
+    display: block;
+  }
+}
+
 .cart{
   position: fixed;
   right: 0;
@@ -13,8 +28,15 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease-in-out;
   padding-bottom: 98px;
+  @media (max-width: $breakpoint-md){
+    width: 100%;
+    left: 0;
+  }
   @media (max-width: $breakpoint-sm){
     padding-bottom: 75px;
+  }
+  &.active{
+    transform: translateX(0);
   }
 }
 
@@ -34,6 +56,15 @@
     font-weight: 600;
     font-size: 30px;
     line-height: 35px;
+    @media (max-width: $breakpoint-lg){
+      font-size: 25px;
+      line-height: 30px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 18px;
+      line-height: 25px;
+      left: 15px;
+    }
   }
   &__close{
     position: absolute;
@@ -46,6 +77,10 @@
     font-size: 24px;
     &:hover{
       transform: translateY(-50%) rotate(180deg);
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 18px;
+      right: 15px;
     }
   }
 }
@@ -66,17 +101,30 @@
   position: relative;
   padding: 30px 30px 20px;
   border-bottom: 1px solid #E4D2BB;
+  @media (max-width: $breakpoint-sm){
+    padding: 20px 15px;
+  }
   &__image-column{
     @include grid-size(180px);
+    @media (max-width: $breakpoint-sm){
+      @include grid-size(100%);
+    }
     img{
       display: block;
       width: 100%;
       height: 125px;
       @include object-fit;
+      @media (max-width: $breakpoint-sm){
+         width: 50%;
+        margin-bottom: 10px;
+      }
     }
   }
   &__content-column{
     @include grid-size(calc(100% - 180px));
+    @media (max-width: $breakpoint-sm){
+      @include grid-size(100%);
+    }
   }
   &__name{
     display: block;
@@ -84,6 +132,11 @@
     font-size: 25px;
     line-height: 35px;
     margin-bottom: 20px;
+    @media (max-width: $breakpoint-lg){
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 10px;
+    }
   }
   &__txt{
     @include text-ellipsis(3);
@@ -91,6 +144,11 @@
     font-size: 15px;
     line-height: 25px;
     margin-bottom: 20px;
+    @media (max-width: $breakpoint-lg){
+      font-size: 13px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
   }
   &__price{
     display: block;
@@ -130,7 +188,7 @@
   display: flex;
   flex-wrap: nowrap;
   height: 98px;
-  @media ($breakpoint-sm){
+  @media (max-width: $breakpoint-sm){
     height: 75px;
   }
   &__price{
@@ -146,6 +204,13 @@
     @media (max-width: 1440px){
       font-size: 25px;
     }
+    @media (max-width: $breakpoint-lg){
+      font-size: 20px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 15px;
+      padding: 22px 0;
+    }
   }
   &__btn{
     display: block;
@@ -158,6 +223,13 @@
     padding: 31px 0;
     @media (max-width: 1440px){
       font-size: 25px;
+    }
+    @media (max-width: $breakpoint-lg){
+      font-size: 20px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 15px;
+      padding: 22px 0;
     }
   }
 }
