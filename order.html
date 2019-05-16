@@ -353,10 +353,157 @@
 <!-- page-wrapper-->
 <main class="page-wrapper --modifier">
 
-    <section class="section">
+    <section class="section order-wrapper">
         <div class="container">
             <h1 class="heading heading-1 brown page-wrapper__title">Оформити замовлення</h1>
+            <form action="/" id="order-form">
+                <div class="row m-row order-row">
+                    <div class="column order-row-left">
+                        <div class="order-form">
+                            <div class="order-form__row form-group">
+                                <label for="name">Ім’я</label>
+                                <input type="text" name="name" id="name" class="form-input"
+                                       placeholder="Олена Сагайдачна">
+                            </div>
+                            <div class="order-form__row form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="text" name="phone" id="phone" class="form-input phone-mask">
+                            </div>
+                            <div class="order-form__row form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" class="form-input"
+                                       placeholder="olena.sahaidachna@gmail.com">
+                            </div>
+                            <div class="order-form__row form-group">
+                                <label for="delivery">Доставка</label>
+                                <select name="delivery" id="delivery" class="form-select">
+                                    <option value="0" selected>Доставка кур’єром</option>
+                                    <option value="1">Доставка кур’єром</option>
+                                </select>
+                            </div>
+                            <div class="order-form__row form-group">
+                                <label for="street">Вулиця</label>
+                                <input type="text" name="street" id="street" class="form-input"
+                                       placeholder="вул. Степана Бандери">
+                            </div>
+                            <div class="order-form__row form-group align-justify">
+                                <div class="order-form__row --modifier align-justify">
+                                    <label for="house">№ дому</label>
+                                    <input type="text" name="house" id="house" class="form-input" placeholder="23">
+                                </div>
+                                <div class="order-form__row --modifier align-justify">
+                                    <label for="entrance">Під’їзд</label>
+                                    <input type="text" name="entrance" id="entrance" class="form-input" placeholder="2">
+                                </div>
+                                <div class="order-form__row --modifier align-justify">
+                                    <label for="flat">Квартира</label>
+                                    <input type="text" name="flat" id="flat" class="form-input" placeholder="24">
+                                </div>
+                            </div>
+                            <div class="order-form__row form-group">
+                                <label for="payment">Оплата</label>
+                                <select name="payment" id="payment" class="form-select">
+                                    <option value="0" selected>Готівкою</option>
+                                    <option value="1">Готівкою</option>
+                                </select>
+                            </div>
+                            <div class="order-form__row form-group">
+                                <label for="promocode">Промокод</label>
+                                <input type="text" name="promocode" id="promocode" class="form-input"
+                                       placeholder="FREESHIPPING0UAH">
+                            </div>
+                            <div class="order-form__row form-group">
+                                <label for="comment">Промокод</label>
+                                <textarea name="comment" id="comment" class="form-textarea"
+                                          placeholder="Доброго дня, доставте будь ласка якомога швидше, щоб я встиг з’їсти їх ще гарячими. Дякую за ваш сервіс!"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary --type-1 order-form__btn">Замовити</button>
+                        </div>
+                    </div>
+                    <div class="column order-row-right">
+                        <div class="order-table">
+                            <h2 class="heading heading-3 order-table__title">Ваше замовлення</h2>
 
+                            <div class="order-table-top">
+                                <div class="row m-row">
+                                    <div class="column order-table-top__first">
+                                        <span class="order-table-top__txt">Товар</span>
+                                    </div>
+                                    <div class="column order-table-top__second">
+                                        <span class="order-table-top__txt">К-ть</span>
+                                    </div>
+                                    <div class="column order-table-top__third">
+                                        <span class="order-table-top__txt">Ціна</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-product">
+                                <div class="row m-row align-middle">
+                                    <div class="column order-product__first">
+                                        <div class="row m-row align-middle">
+                                            <div class="column">
+                                                <img src="dist/img/product.jpg" class="order-product__img" alt="">
+                                            </div>
+                                            <div class="column">
+                                                <span class="order-product__name">Карпатські гомбовці</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column order-product__second">
+                                        <div class="product-item-spinner --modifier">
+                                            <button type="button" class="product-item-spinner__btn --minus js-product-minus">-</button>
+                                            <input type="text" name="count" class="product-item-spinner__input" value="0">
+                                            <button type="button" class="product-item-spinner__btn --plus js-product-plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="column order-product__third">
+                                        <span class="order-product__price">121 грн</span>
+                                    </div>
+                                </div>
+                                <a class="icon icon-close order-product__remove"></a>
+                            </div>
+                            <div class="order-product">
+                                <div class="row m-row align-middle">
+                                    <div class="column order-product__first">
+                                        <div class="row m-row align-middle">
+                                            <div class="column">
+                                                <img src="dist/img/product.jpg" class="order-product__img" alt="">
+                                            </div>
+                                            <div class="column">
+                                                <span class="order-product__name">Карпатські гомбовці</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column order-product__second">
+                                        <div class="product-item-spinner --modifier">
+                                            <button type="button" class="product-item-spinner__btn --minus js-product-minus">-</button>
+                                            <input type="text" name="count" class="product-item-spinner__input" value="0">
+                                            <button type="button" class="product-item-spinner__btn --plus js-product-plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="column order-product__third">
+                                        <span class="order-product__price">121 грн</span>
+                                    </div>
+                                </div>
+                                <a class="icon icon-close order-product__remove"></a>
+                            </div>
+
+                            <div class="order-table-bottom">
+                                <div class="order-table-bottom__row row m-row align-justify align-middle">
+                                    <div class="column">
+                                        <span class="order-table-bottom__title">Загальна сума</span>
+                                    </div>
+                                    <div class="column">
+                                        <span class="order-table-bottom__price">310 грн</span>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary --type-1 order-table-bottom__btn">Замовити</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -470,9 +617,10 @@
 
 <!-- libs -->
 <script src="dist/js/libs/jquery-3.2.1.min.js"></script>
-<script src="dist/js/libs/flickity.pkgd.min.js"></script>
+<script src="dist/js/libs/jquery.mask.min.js"></script>
 
 <!-- frontend -->
 <script src="dist/js/front.js"></script>
+<script src="dist/js/cart.js"></script>
 </body>
 </html>
