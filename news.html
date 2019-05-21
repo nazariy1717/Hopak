@@ -281,17 +281,17 @@
 <header class="header">
     <div class="container">
         <div class="header__row row m-row align-justify align-middle">
-            <div class="column">
+            <div class="header__column">
                 <a href="/">
                     <svg class="inline-svg-icon header__logo">
                         <use xlink:href="#header-logo"></use>
                     </svg>
                 </a>
             </div>
-            <div class="column">
+            <div class="header__column">
                 <ul class="header-list">
                     <li class="header-list__item">
-                        <a href="/" class="header-list__link active">РЕСТОРАН</a>
+                        <a href="/" class="header-list__link">РЕСТОРАН</a>
                     </li>
                     <li class="header-list__item">
                         <a href="/" class="header-list__link">ЗАЛИ</a>
@@ -310,7 +310,42 @@
                     </li>
                 </ul>
             </div>
-            <div class="column"></div>
+            <div class="header__column">
+                <div class="sub-header">
+                    <a href="/delivery.html" class="sub-header__link">ЗАМОВИТИ ДОСТАВКУ</a>
+                    <div class="header-cart js-show-cart">
+                        <i class="icon icon-cart header-cart__icon"></i>
+                        <span class="header-cart__count">10</span>
+                        <span class="header-cart__price">1999 грн</span>
+                    </div>
+                    <div class="header-language">
+                        <a class="header-language__active">
+                            <img src="dist/img/flag-ukr.jpg" class="header-language__flag" alt="">
+                            <span class="header-language__txt">УКР</span>
+                            <i class="icon icon-arrow-down header-language__arrow"></i>
+                        </a>
+                        <ul class="header-language__list">
+                            <li class="header-language__item">
+                                <a href="/eng" class="header-language__link">
+                                    <img src="dist/img/flag-uk.jpg" class="header-language__flag" alt="">
+                                    <span class="header-language__txt">ENG</span>
+                                </a>
+                            </li>
+                            <li class="header-language__item">
+                                <a href="/ru" class="header-language__link">
+                                    <img src="dist/img/flag-rus.jpg" class="header-language__flag" alt="">
+                                    <span class="header-language__txt">RUS</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hamburger">
+        <div class="hamburger__box">
+            <div class="hamburger__inner"></div>
         </div>
     </div>
 </header>
@@ -553,11 +588,99 @@
     </div>
 </footer>
 
+
+
+<!-- fixed button -->
+<button type="button" class="btn book-table-btn modalTrigger" data-modal="#booking-modal">Зарезервувати столик</button>
+
+<!-- booking-modal -->
+<div class="modal" id="booking-modal">
+    <div class="modal__body">
+        <div class="modal__content booking-modal">
+            <span class="modal__close icon-close js-close-modal"></span>
+            <span class="heading heading-3 booking-modal__title">Зарезервувати столик</span>
+            <p class="app-txt-normal booking-modal__txt">Для того, щоб зарезрвувати столик, зателефонуйте нам за цим
+                телефоном</p>
+            <a href="tel:+380 93 115 12 61" class="heading heading-4 booking-modal__phone">+380 93 115 12 61</a>
+        </div>
+    </div>
+</div>
+
+<!-- cart -->
+<div class="cart">
+    <div class="cart-top">
+        <span class="cart-top__title">Корзина</span>
+        <span class="icon icon-close cart-top__close js-cart-close"></span>
+    </div>
+    <div class="cart-content">
+        <div class="cart-product">
+            <div class="row m-row">
+                <div class="column cart-product__image-column">
+                    <img src="dist/img/product.jpg" alt="">
+                </div>
+                <div class="column cart-product__content-column">
+                    <span class="cart-product__name">Карпатські гомбовці</span>
+                    <p class="cart-product__txt">Карп, сом, окунь, солодкий перець, спілі помідори, гострий
+                        перецьчасник, молота паприка, лапша гострий перець, кріп, </p>
+                    <div class="row m-row-sm align-middle align-justify">
+                        <div class="column-sm">
+                            <div class="product-item-spinner --modifier">
+                                <button class="product-item-spinner__btn --minus js-product-minus">-</button>
+                                <input type="text" name="count" class="product-item-spinner__input" value="0">
+                                <button class="product-item-spinner__btn --plus js-product-plus">+</button>
+                            </div>
+                        </div>
+                        <div class="column-sm">
+                            <span class="cart-product__price">189 грн</span>
+                        </div>
+                        <div class="column-sm">
+                            <a href="" class="cart-product__remove"><i class="icon icon-close"></i>Видалити</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-product">
+            <div class="row m-row">
+                <div class="column cart-product__image-column">
+                    <img src="dist/img/product.jpg" alt="">
+                </div>
+                <div class="column cart-product__content-column">
+                    <span class="cart-product__name">Карпатські гомбовці</span>
+                    <p class="cart-product__txt">Карп, сом, окунь, солодкий перець, спілі помідори, гострий
+                        перецьчасник, молота паприка, лапша гострий перець, кріп, </p>
+                    <div class="row m-row-sm align-middle align-justify">
+                        <div class="column-sm">
+                            <div class="product-item-spinner --modifier">
+                                <button class="product-item-spinner__btn --minus js-product-minus">-</button>
+                                <input type="text" name="count" class="product-item-spinner__input" value="0">
+                                <button class="product-item-spinner__btn --plus js-product-plus">+</button>
+                            </div>
+                        </div>
+                        <div class="column-sm">
+                            <span class="cart-product__price">189 грн</span>
+                        </div>
+                        <div class="column-sm">
+                            <a href="" class="cart-product__remove"><i class="icon icon-close"></i>Видалити</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-bottom">
+        <span class="cart-bottom__price">3021 грн</span>
+        <a class="cart-bottom__btn">Оформити замовлення</a>
+    </div>
+</div>
+<div class="cart-background"></div>
+
 <!-- libs -->
 <script src="dist/js/libs/jquery-3.2.1.min.js"></script>
+<script src="dist/js/libs/jquery.mask.min.js"></script>
 
 <!-- frontend -->
 <script src="dist/js/front.js"></script>
-
+<script src="dist/js/cart.js"></script>
 </body>
 </html>
