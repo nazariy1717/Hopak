@@ -54,28 +54,6 @@
       }
     }
   }
-  &__btn{
-    position: absolute;
-    right: 30px;
-    top: 0;
-    width: 130px;
-    height: 130px;
-    padding: 47px 0;
-    border-radius: 50%;
-    text-align: center;
-    color: var(--col-white);
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 20px;
-    background-color: var(--col-red);
-    @media (max-width: 1900px){
-      top: -70px;
-      right: 0;
-    }
-    @media (max-width: 1600px){
-      top: -125px;
-    }
-  }
   &__title{
     margin-bottom: 50px;
     @media (max-width: $breakpoint-xl){

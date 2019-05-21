@@ -54,3 +54,60 @@
     }
   }
 }
+
+.book-table-btn{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 130px;
+  height: 130px;
+  padding: 47px 0;
+  border-radius: 50%;
+  z-index: 9;
+  overflow: initial;
+  text-align: center;
+  color: var(--col-white);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  background-color: var(--col-red);
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: -2;
+    width: 150%;
+    height: 150%;
+    top: 50%;
+    left: 50%;
+    margin-left: -75%;
+    margin-top: -75%;
+    border-radius: 50%;
+    background-color: var(--col-red);
+    animation: pulse-ring 2.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: -1;
+    width: 180%;
+    height: 180%;
+    top: 50%;
+    left: 50%;
+    margin-left: -90%;
+    margin-top: -90%;
+    border-radius: 50%;
+    background-color: var(--col-red);
+    animation: pulse-ring 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  }
+  @media (max-width: $breakpoint-sm){
+    right: 15px;
+    bottom: 15px;
+    width: 110px;
+    height: 110px;
+    padding: 25px 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

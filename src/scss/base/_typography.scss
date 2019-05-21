@@ -48,8 +48,8 @@ strong, .bold{ font-weight: 700; }
 
 .heading-2{
   font-weight: 600;
-  font-size: 45px;
-  line-height: 50px;
+  font-size: 30px;
+  line-height: 35px;
   @media (max-width: $breakpoint-xl){
     font-size: 35px;
     line-height: 45px;
@@ -62,8 +62,8 @@ strong, .bold{ font-weight: 700; }
 
 .heading-3{
   font-weight: 600;
-  font-size: 30px;
-  line-height: 35px;
+  font-size: 25px;
+  line-height: 30px;
   @media (max-width: $breakpoint-xl){
     font-size: 25px;
     line-height: 35px;
@@ -72,8 +72,8 @@ strong, .bold{ font-weight: 700; }
 
 .heading-4{
   font-weight: 500;
-  font-size: 25px;
-  line-height: 35px;
+  font-size: 20px;
+  line-height: 30px;
   @media (max-width: $breakpoint-sm){
     font-size: 20px;
     line-height: 25px;
@@ -82,12 +82,8 @@ strong, .bold{ font-weight: 700; }
 
 .heading-5{
   font-weight: normal;
-  font-size: 18px;
-  line-height: 35px;
-  @media (max-width: $breakpoint-lg){
-    font-size: 16px;
-    line-height: 32px;
-  }
+  font-size: 16px;
+  line-height: 32px;
   @media (max-width: $breakpoint-sm){
     font-size: 15px;
     line-height: 30px;
@@ -107,8 +103,8 @@ strong, .bold{ font-weight: 700; }
 .app-txt{
   display: block;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 35px;
+  font-size: 16px;
+  line-height: 32px;
   @media (max-width: $breakpoint-sm){
     font-size: 15px;
     line-height: 30px;
@@ -118,8 +114,8 @@ strong, .bold{ font-weight: 700; }
 .app-txt-normal{
   display: block;
   font-weight: normal;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 32px;
 }
 
 .app-txt-smaller{
@@ -144,13 +140,9 @@ strong, .bold{ font-weight: 700; }
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 35px;
+  font-size: 16px;
+  line-height: 32px;
   color: var(--col-brown);
-  @media (max-width: $breakpoint-sm){
-    font-size: 15px;
-    line-height: 20px;
-  }
   h1{
     @extend .heading-1;
     margin-bottom: 30px;

@@ -306,7 +306,7 @@
             <div class="header__column">
                 <ul class="header-list">
                     <li class="header-list__item">
-                        <a href="/" class="header-list__link active">РЕСТОРАН</a>
+                        <a href="/" class="header-list__link">РЕСТОРАН</a>
                     </li>
                     <li class="header-list__item">
                         <a href="/" class="header-list__link">ЗАЛИ</a>
@@ -328,7 +328,7 @@
             <div class="header__column">
                 <div class="sub-header">
                     <a href="/delivery.html" class="sub-header__link">ЗАМОВИТИ ДОСТАВКУ</a>
-                    <div class="header-cart">
+                    <div class="header-cart js-show-cart">
                         <i class="icon icon-cart header-cart__icon"></i>
                         <span class="header-cart__count">10</span>
                         <span class="header-cart__price">1999 грн</span>
@@ -365,6 +365,7 @@
     </div>
 </header>
 
+
 <main class="page-wrapper">
     <section class="section home">
         <div class="home-carousel --white-arrow">
@@ -381,7 +382,7 @@
                                     <p>З нами весело та смачно</p>
                                 </div>
                             </div>
-                            <a href="/" class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
+                            <a class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
                         </div>
                     </div>
                 </div>
@@ -399,7 +400,7 @@
                                     <p>Смачні коктейлі, ароматні кальяни, улюблені музичні хіти  та приємна атмосфера.</p>
                                 </div>
                             </div>
-                            <a href="/" class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
+                            <a class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
                         </div>
                     </div>
                 </div>
@@ -417,7 +418,7 @@
                                     <p>Смачні страви української , гуцульської, старогалицької та традиційної  кавказької кухні.</p>
                                 </div>
                             </div>
-                            <a href="/" class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
+                            <a class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
                         </div>
                     </div>
                 </div>
@@ -435,7 +436,7 @@
                                     <p>Розслабляюча атмосфера після важкого робочого дня</p>
                                 </div>
                             </div>
-                            <a href="/" class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
+                            <a class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
                         </div>
                     </div>
                 </div>
@@ -453,7 +454,7 @@
                                     <p>Готуємо смачні бізнес ланчі  під замовлення</p>
                                 </div>
                             </div>
-                            <a href="/" class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
+                            <a class="btn btn-bordered modalTrigger" data-modal="#booking-modal">Зарезервувати столик</a>
                         </div>
                     </div>
                 </div>
@@ -497,12 +498,81 @@
     </div>
 </div>
 
+<div class="cart">
+    <div class="cart-top">
+        <span class="cart-top__title">Корзина</span>
+        <span class="icon icon-close cart-top__close js-cart-close"></span>
+    </div>
+    <div class="cart-content">
+        <div class="cart-product">
+            <div class="row m-row">
+                <div class="column cart-product__image-column">
+                    <img src="dist/img/product.jpg" alt="">
+                </div>
+                <div class="column cart-product__content-column">
+                    <span class="cart-product__name">Карпатські гомбовці</span>
+                    <p class="cart-product__txt">Карп, сом, окунь, солодкий перець, спілі помідори, гострий
+                        перецьчасник, молота паприка, лапша гострий перець, кріп, </p>
+                    <div class="row m-row-sm align-middle align-justify">
+                        <div class="column-sm">
+                            <div class="product-item-spinner --modifier">
+                                <button class="product-item-spinner__btn --minus js-product-minus">-</button>
+                                <input type="text" name="count" class="product-item-spinner__input" value="0">
+                                <button class="product-item-spinner__btn --plus js-product-plus">+</button>
+                            </div>
+                        </div>
+                        <div class="column-sm">
+                            <span class="cart-product__price">189 грн</span>
+                        </div>
+                        <div class="column-sm">
+                            <a href="" class="cart-product__remove"><i class="icon icon-close"></i>Видалити</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-product">
+            <div class="row m-row">
+                <div class="column cart-product__image-column">
+                    <img src="dist/img/product.jpg" alt="">
+                </div>
+                <div class="column cart-product__content-column">
+                    <span class="cart-product__name">Карпатські гомбовці</span>
+                    <p class="cart-product__txt">Карп, сом, окунь, солодкий перець, спілі помідори, гострий
+                        перецьчасник, молота паприка, лапша гострий перець, кріп, </p>
+                    <div class="row m-row-sm align-middle align-justify">
+                        <div class="column-sm">
+                            <div class="product-item-spinner --modifier">
+                                <button class="product-item-spinner__btn --minus js-product-minus">-</button>
+                                <input type="text" name="count" class="product-item-spinner__input" value="0">
+                                <button class="product-item-spinner__btn --plus js-product-plus">+</button>
+                            </div>
+                        </div>
+                        <div class="column-sm">
+                            <span class="cart-product__price">189 грн</span>
+                        </div>
+                        <div class="column-sm">
+                            <a href="" class="cart-product__remove"><i class="icon icon-close"></i>Видалити</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-bottom">
+        <span class="cart-bottom__price">3021 грн</span>
+        <a class="cart-bottom__btn">Оформити замовлення</a>
+    </div>
+</div>
+<div class="cart-background"></div>
 <!-- libs -->
 <script src="dist/js/libs/jquery-3.2.1.min.js"></script>
 <script src="dist/js/libs/flickity.pkgd.min.js"></script>
+<script src="dist/js/libs/jquery.mask.min.js"></script>
 
 <!-- frontend -->
 <script src="dist/js/front.js"></script>
+<script src="dist/js/cart.js"></script>
 <script>
     slider.newSlider('.home-carousel',{});
 </script>
