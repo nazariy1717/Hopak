@@ -17,25 +17,20 @@
 .btn-bordered{
   max-width: 460px;
   width: 100%;
-  height: 85px;
-  border: 1px solid var(--col-white);
+  height: 58px;
+  border: 2px solid var(--col-white);
   border-radius: 3px;
   text-align: center;
   font-weight: 600;
-  font-size: 25px;
-  line-height: 85px;
+  font-size: 18px;
+  line-height: 58px;
   color: var(--col-white);
   transition: all 0.3s;
   @media (max-width: 1600px){
     max-width: 400px;
-    height: 75px;
-    line-height: 75px;
   }
   @media (max-width: 1380px){
     max-width: 350px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 20px;
   }
   @media (max-width: $breakpoint-sm){
     max-width: 255px;
@@ -45,10 +40,10 @@
   }
   &:hover{
     background: var(--col-white);
-    color: #333333;
+    color: var(--col-brown);
   }
   &.--red{
-    border: 1px solid var(--col-red);
+    border: 2px solid var(--col-red);
     color: var(--col-red);
     &:hover{
       background: var(--col-red);
@@ -56,7 +51,7 @@
     }
   }
   &.--brown{
-    border: 1px solid var(--col-brown);
+    border: 2px solid var(--col-brown);
     color: var(--col-brown);
     &:hover{
       background: var(--col-brown);
