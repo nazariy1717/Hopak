@@ -44,9 +44,12 @@
     top: 75px;
   }
   &__item{
+    position: relative;
+    padding: 37px 0;
     display: inline-block;
     @media (max-width: $breakpoint-xl) {
       display: block;
+      padding: 0;
       margin-bottom: 15px;
       text-align: center;
       &:nth-last-child(1){
@@ -127,6 +130,59 @@
     }
   }
 }
+
+.header-drop{
+  &:hover{
+    .header-drop__list{
+      display: block;
+    }
+  }
+  &__list{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 98px;
+    width: 550px;
+    padding: 12px 0;
+    @media (max-width: $breakpoint-xl){
+      position: initial;
+      left: initial;
+      right: initial;
+      top: initial;
+      width: initial;
+      display: block;
+    }
+    &:before{
+      content: '';
+      @include absolute;
+      left: -999%;
+      right: -999%;
+      z-index: -1;
+      background-color: var(--col-grey);
+      @media (max-width: $breakpoint-xl){
+        display: none;
+      }
+    }
+  }
+  &__item{
+    display: inline-block;
+    @media (max-width: $breakpoint-xl){
+      display: block;
+    }
+    & + & {
+      margin-left: 60px;
+      @media (max-width: $breakpoint-xl){
+        margin-left: 0;
+      }
+    }
+  }
+  &__link{
+
+  }
+}
+
+
 
 .sub-header{
   display: flex;
