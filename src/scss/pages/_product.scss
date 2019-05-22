@@ -19,7 +19,7 @@
     &:before{
       content: '';
       @include absolute;
-      left: -30px;
+      left: -60px;
       top: 0;
       background-color: transparent;
       z-index: -1;
@@ -86,10 +86,12 @@
   position: relative;
   overflow: hidden;
   background: var(--col-light-yellow);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   backface-visibility: hidden;
   margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
   &:hover{
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
     .product-item__img{
       transform: translateY(-60px);
     }
@@ -265,6 +267,7 @@
     height: 30px;
     outline: none;
     border: 0;
+    text-align: center;
     font-weight: normal;
     font-size: 18px;
     color: #604516;

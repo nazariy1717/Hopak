@@ -9,6 +9,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-edit:before {
+  content: "\e907";
+}
 .icon-zoom-in_icon:before {
   content: "\e906";
 }
