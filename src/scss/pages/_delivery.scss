@@ -7,6 +7,7 @@
     height: 510px;
     width: 100%;
     @include object-fit;
+    margin-top: 50px;
     @media (max-width: $breakpoint-lg){
       height: 450px;
     }
@@ -15,6 +16,7 @@
     }
     @media (max-width: $breakpoint-sm){
       height: 350px;
+      margin-top: 30px;
     }
   }
 }
