@@ -214,11 +214,14 @@
 .suggest-item{
   position: relative;
   margin-bottom: 30px;
-  &__img{
-    display: block;
-    width: 100%;
+  &:hover{
+    .suggest-item__img{
+      transform: scale(1.06);
+    }
+  }
+  &__img-wrap{
     height: 500px;
-    @include object-fit;
+    overflow: hidden;
     margin-bottom: 30px;
     @media (max-width: 1440px){
       height: 400px;
@@ -231,7 +234,26 @@
     }
     @media (max-width: $breakpoint-sm){
       height: 225px;
-      margin-bottom: 15 px;
+      margin-bottom: 15px;
+    }
+  }
+  &__img{
+    display: block;
+    width: 100%;
+    height: 500px;
+    @include object-fit;
+    transition: all 0.3s ease-in-out;
+    @media (max-width: 1440px){
+      height: 400px;
+    }
+    @media (max-width: $breakpoint-xl){
+      height: 275px;
+    }
+    @media (max-width: $breakpoint-lg){
+      height: 275px;
+    }
+    @media (max-width: $breakpoint-sm){
+      height: 225px;
     }
   }
 }
